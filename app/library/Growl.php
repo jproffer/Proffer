@@ -1,9 +1,10 @@
 <?php
+namespace library;
 /**
  * Get GROWL desktop notifications.  
  * @author Johnathan Proffer
  */
-class library_Growl
+class Growl
 	{
 		const GROWL_PRIORITY_LOW = -2;
 		const GROWL_PRIORITY_MODERATE = -1;
