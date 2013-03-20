@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+
+	<title>Class utils\SecurityManager</title>
+
+	<script type="text/javascript" src="resources/combined.js?699355046"></script>
+	<script type="text/javascript" src="elementlist.js?1127033442"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3505392360" />
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+			<h3>Namespaces</h3>
+			<ul>
+				<li><a href="namespace-Controller.html">Controller</a>
+						</li>
+				<li><a href="namespace-Core.html">Core<span></span></a>
+						<ul>
+				<li><a href="namespace-Core.abstractions.html">abstractions</a>
+						</li>
+				<li><a href="namespace-Core.Exceptions.html">Exceptions</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Interfaces.html">Interfaces</a>
+						</li>
+				<li><a href="namespace-library.html">library</a>
+						</li>
+				<li><a href="namespace-Model.html">Model<span></span></a>
+						<ul>
+				<li><a href="namespace-Model.interfaces.html">interfaces</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-None.html">None</a>
+						</li>
+				<li><a href="namespace-PHP.html">PHP</a>
+						</li>
+				<li class="active"><a href="namespace-utils.html">utils</a>
+						</li>
+			</ul>
+		</div>
+
+		<hr />
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li class="active"><a href="class-utils.SecurityManager.html">SecurityManager</a></li>
+			</ul>
+
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="" />
+		<input type="hidden" name="ie" value="UTF-8" />
+		<input type="text" name="q" class="text" />
+		<input type="submit" value="Search" />
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-utils.html" title="Summary of utils"><span>Namespace</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+			<li>
+				<a href="todo.html" title="Todo list"><span>Todo</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class SecurityManager</h1>
+
+
+
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		<b>Namespace:</b> <a href="namespace-utils.html">utils</a><br />
+		
+
+		<b>Located at</b> <a href="source-class-utils.SecurityManager.html#11-113" title="Go to source code">app/utils/SecurityManager.php</a><br />
+	</div>
+
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="CheckSecBasic" id="_CheckSecBasic">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_CheckSecBasic">#</a>
+		<code><a href="source-class-utils.SecurityManager.html#15-30" title="Go to source code">CheckSecBasic</a>( )</code>
+
+		<div class="description short">
+			
+<p>Validate access rights to a specific area. We allow validation of multiple
+types</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Validate access rights to a specific area. We allow validation of multiple
+types</p>
+
+
+
+
+
+
+				<h4>Example</h4>
+				<div class="list">
+						library_SecurityManager::CheckecBasic('admin', 'client', 'clientAdmin') Failed
+access rights destroys user session and redirects to homepage<br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="GenerateToken" id="_GenerateToken">
+
+		<td class="attributes"><code>
+			 public static
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_GenerateToken">#</a>
+		<code><a href="source-class-utils.SecurityManager.html#32-44" title="Go to source code">GenerateToken</a>( <span>string <var>$name</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Generate an access token for pages. This is to prevent hacks.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Generate an access token for pages. This is to prevent hacks.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$name</var></dt>
+					<dd><code>string</code><br>$name</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="GenerateReferenceToken" id="_GenerateReferenceToken">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_GenerateReferenceToken">#</a>
+		<code><a href="source-class-utils.SecurityManager.html#46-66" title="Go to source code">GenerateReferenceToken</a>( <span>mixed <var>$table</var></span>, <span>mixed <var>$field</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="ValidateToken" id="_ValidateToken">
+
+		<td class="attributes"><code>
+			 public static
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_ValidateToken">#</a>
+		<code><a href="source-class-utils.SecurityManager.html#68-83" title="Go to source code">ValidateToken</a>( <span>string <var>$uri</var></span>, <span>mixed <var>$name</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Validate a form or page token</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Validate a form or page token</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$uri</var></dt>
+					<dd><code>string</code><br>$name</dd>
+					<dt><var>$name</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="GenPW" id="_GenPW">
+
+		<td class="attributes"><code>
+			 public static
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_GenPW">#</a>
+		<code><a href="source-class-utils.SecurityManager.html#85-112" title="Go to source code">GenPW</a>( <span>mixed <var>$type</var> = <span class="php-quote">'dict'</span></span>, <span>mixed <var>$len</var> = <span class="php-num">2</span></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+				<h4>Var</h4>
+				<div class="list">
+						$type: $dict = generate based on list of words, up to $len words $rand =
+generate random-char pass, up to $len chars<br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		 API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="1.3.0">
+	<file name="/home/firewall/www/ProfferFramework/app/config/production.php">
+		<error severity="error" line="37" message="Missing documentation of function getDomainTemplatePath()" source="ApiGen.Documentation.Documentation"/>
+	</file>
+	<file name="/home/firewall/www/ProfferFramework/app/config/sys_vars_functions.php">
+		<error severity="error" line="36" message="Missing documentation of function safestring()" source="ApiGen.Documentation.Documentation"/>
+	</file>
+	<file name="/home/firewall/www/ProfferFramework/app/Controller/Auth.php">
+		<error severity="error" line="4" message="Missing documentation of class Controller\Auth" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="36" message="Missing documentation of method Controller\Auth::CheckStatus()" source="ApiGen.Documentation.Documentation"/>
+	</file>
+	<file name="/home/firewall/www/ProfferFramework/app/Controller/Get.php">
+		<error severity="error" line="11" message="Missing documentation of property Controller\Get::$config" source="ApiGen.Documentation.Documentation"/>
+	</file>
+	<file name="/home/firewall/www/ProfferFramework/app/Core/abstractions/SimpleAbstract.php">
+		<error severity="error" line="16" message="Missing documentation of class Core\abstractions\SimpleAbstract" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="23" message="Missing documentation of method Core\abstractions\SimpleAbstract::__construct()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="26" message="Missing documentation of method Core\abstractions\SimpleAbstract::__destruct()" source="ApiGen.Documentation.Documentation"/>
+	</file>
+	<file name="/home/firewall/www/ProfferFramework/app/Core/autoloader.php">
+		<error severity="error" line="18" message="Missing documentation of method Core\AutoLoader::__construct()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="27" message="Missing documentation of method Core\AutoLoader::addPath()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="43" message="Missing documentation of method Core\AutoLoader::_autoload()" source="ApiGen.Documentation.Documentation"/>
+	</file>
+	<file name="/home/firewall/www/ProfferFramework/app/Core/ErrorHandler.php">
+		<error severity="error" line="12" message="Missing documentation of class Core\ErrorHandler" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="66" message="Missing documentation of method Core\ErrorHandler::__construct()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="72" message="Missing documentation of method Core\ErrorHandler::__destruct()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="98" message="Missing documentation of method Core\ErrorHandler::set()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="122" message="Missing documentation of method Core\ErrorHandler::ignoreObject()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="125" message="Missing documentation of method Core\ErrorHandler::get()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="129" message="Missing documentation of method Core\ErrorHandler::handler()" source="ApiGen.Documentation.Documentation"/>
+	</file>
+	<file name="/home/firewall/www/ProfferFramework/app/Core/Exceptions/DatabaseException.php">
+		<error severity="error" line="5" message="Missing documentation of exception Core\Exceptions\DatabaseException" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="6" message="Missing documentation of method Core\Exceptions\DatabaseException::__construct()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="11" message="Missing documentation of method Core\Exceptions\DatabaseException::__toString()" source="ApiGen.Documentation.Documentation"/>
+	</file>
+	<file name="/home/firewall/www/ProfferFramework/app/Core/Exceptions/FileReadException.php">
+		<error severity="error" line="4" message="Missing documentation of exception Core\Exceptions\FileReadException" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="5" message="Missing documentation of method Core\Exceptions\FileReadException::__construct()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="10" message="Missing documentation of method Core\Exceptions\FileReadException::__toString()" source="ApiGen.Documentation.Documentation"/>
+	</file>
+	<file name="/home/firewall/www/ProfferFramework/app/Core/Exceptions/InterfaceException.php">
+		<error severity="error" line="5" message="Missing documentation of exception Core\Exceptions\InterfaceException" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="6" message="Missing documentation of method Core\Exceptions\InterfaceException::__construct()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="11" message="Missing documentation of method Core\Exceptions\InterfaceException::__toString()" source="ApiGen.Documentation.Documentation"/>
+	</file>
+	<file name="/home/firewall/www/ProfferFramework/app/Core/GAbstract.php">
+		<error severity="error" line="15" message="Missing documentation of class Core\GAbstract" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="22" message="Missing documentation of method Core\GAbstract::__construct()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="26" message="Missing documentation of method Core\GAbstract::__destruct()" source="ApiGen.Documentation.Documentation"/>
+	</file>
+	<file name="/home/firewall/www/ProfferFramework/app/Core/GDbm.php">
+		<error severity="error" line="15" message="Missing documentation of class Core\GDbm" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="20" message="Missing documentation of method Core\GDbm::__construct()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="33" message="Missing documentation of method Core\GDbm::__destruct()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="45" message="Missing documentation of method Core\GDbm::query()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="100" message="Missing documentation of method Core\GDbm::squery()" source="ApiGen.Documentation.Documentation"/>
+	</file>
+	<file name="/home/firewall/www/ProfferFramework/app/Core/Interface.php">
+		<error severity="error" line="2" message="Missing documentation of interface Core_Interface" source="ApiGen.Documentation.Documentation"/>
+	</file>
+	<file name="/home/firewall/www/ProfferFramework/app/Core/MAbstract.php">
+		<error severity="error" line="16" message="Missing documentation of class Core\MAbstract" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="23" message="Missing documentation of method Core\MAbstract::__construct()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="27" message="Missing documentation of method Core\MAbstract::__destruct()" source="ApiGen.Documentation.Documentation"/>
+	</file>
+	<file name="/home/firewall/www/ProfferFramework/app/Core/MasterAbstract.php">
+		<error severity="error" line="14" message="Missing documentation of trait Core\MasterAbstract" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="21" message="Missing documentation of property Core\MasterAbstract::$jsLibraries" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="23" message="Missing documentation of property Core\MasterAbstract::$_vars" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="25" message="Missing documentation of property Core\MasterAbstract::$protected" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="27" message="Missing documentation of property Core\MasterAbstract::$config" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="51" message="Missing documentation of throwing an exception of method Core\MasterAbstract::__destruct()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="158" message="Missing documentation of method Core\MasterAbstract::__construct()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="340" message="Missing documentation of method Core\MasterAbstract::__get()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="344" message="Missing documentation of method Core\MasterAbstract::__set()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="348" message="Missing documentation of method Core\MasterAbstract::toArray()" source="ApiGen.Documentation.Documentation"/>
+	</file>
+	<file name="/home/firewall/www/ProfferFramework/app/Core/MDbm.php">
+		<error severity="error" line="14" message="Missing documentation of class Core\MDbm" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="16" message="Missing documentation of property Core\MDbm::$_mysql_errmsg" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="17" message="Missing documentation of property Core\MDbm::$_mysql_errcode" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="19" message="Missing documentation of property Core\MDbm::$conn" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="81" message="Missing documentation of method Core\MDbm::__construct()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="95" message="Missing documentation of method Core\MDbm::__destruct()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="97" message="Missing documentation of method Core\MDbm::__call()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="102" message="Missing documentation of method Core\MDbm::query()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="114" message="Missing documentation of return value of method Core\MDbm::getRow()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="114" message="Missing documentation of parameter Core\MDbm::getRow($sql)" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="119" message="Missing documentation of method Core\MDbm::affected()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="120" message="Missing documentation of method Core\MDbm::getAll()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="149" message="Missing documentation of method Core\MDbm::lastid()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="152" message="Missing documentation of method Core\MDbm::changedb()" source="ApiGen.Documentation.Documentation"/>
+	</file>
+	<file name="/home/firewall/www/ProfferFramework/app/Core/Mobile.php">
+		<error severity="error" line="10" message="Missing documentation of class Core\Mobile" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="11" message="Missing documentation of property Core\Mobile::$mobile" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="12" message="Missing documentation of property Core\Mobile::$mobile_agents" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="24" message="Missing documentation of method Core\Mobile::__construct()" source="ApiGen.Documentation.Documentation"/>
+	</file>
+	<file name="/home/firewall/www/ProfferFramework/app/Core/Sessions.php">
+		<error severity="error" line="11" message="Missing documentation of class Core\Sessions" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="17" message="Missing documentation of property Core\Sessions::$protect" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="19" message="Missing documentation of property Core\Sessions::$_sessionid" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="20" message="Missing documentation of property Core\Sessions::$_session_name" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="22" message="Missing documentation of parameter Core\Sessions::__call($arguments)" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="22" message="Missing documentation of parameter Core\Sessions::__call($name)" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="31" message="Missing documentation of method Core\Sessions::instance()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="38" message="Missing documentation of method Core\Sessions::__destruct()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="40" message="Missing documentation of method Core\Sessions::__construct()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="60" message="Missing documentation of method Core\Sessions::_session_destroy()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="65" message="Missing documentation of method Core\Sessions::_session_open()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="66" message="Missing documentation of method Core\Sessions::_session_close()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="68" message="Missing documentation of method Core\Sessions::_session_write()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="84" message="Missing documentation of method Core\Sessions::_session_read()" source="ApiGen.Documentation.Documentation"/>
+	</file>
+	<file name="/home/firewall/www/ProfferFramework/app/Core/SysUpgrade.php">
+		<error severity="error" line="11" message="Missing documentation of class Core\SysUpgrade" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="13" message="Missing documentation of property Core\SysUpgrade::$status" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="17" message="Missing documentation of method Core\SysUpgrade::__construct()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="22" message="Missing documentation of method Core\SysUpgrade::check()" source="ApiGen.Documentation.Documentation"/>
+	</file>
+	<file name="/home/firewall/www/ProfferFramework/app/Core/Uri.php">
+		<error severity="error" line="11" message="Missing documentation of class Core\Uri" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="12" message="Missing documentation of method Core\Uri::__construct()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="64" message="Missing documentation of method Core\Uri::__get()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="69" message="Missing documentation of method Core\Uri::toArray()" source="ApiGen.Documentation.Documentation"/>
+	</file>
+	<file name="/home/firewall/www/ProfferFramework/app/error_pages/.cache/4e0ab1d7adcb0845066afb15acfe9c59d5387b4e._ER_TEMPLATE_NOT_FOUND.tpl.php">
+		<error severity="error" line="25" message="Missing documentation of function content_51473430d520a()" source="ApiGen.Documentation.Documentation"/>
+	</file>
+	<file name="/home/firewall/www/ProfferFramework/app/error_pages/.templates_c/4e0ab1d7adcb0845066afb15acfe9c59d5387b4e.file._ER_TEMPLATE_NOT_FOUND.tpl.cache.php">
+		<error severity="error" line="29" message="Missing documentation of function content_51473430d4ee4()" source="ApiGen.Documentation.Documentation"/>
+	</file>
+	<file name="/home/firewall/www/ProfferFramework/app/Interfaces/iAbstract.php">
+		<error severity="error" line="5" message="Missing documentation of interface Interfaces\iAbstract" source="ApiGen.Documentation.Documentation"/>
+	</file>
+	<file name="/home/firewall/www/ProfferFramework/app/library/benchmark.php">
+		<error severity="error" line="10" message="Missing documentation of class library\benchmark" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="11" message="Missing documentation of property library\benchmark::$start" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="12" message="Missing documentation of property library\benchmark::$end" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="14" message="Missing documentation of method library\benchmark::start()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="19" message="Missing documentation of method library\benchmark::stop()" source="ApiGen.Documentation.Documentation"/>
+	</file>
+	<file name="/home/firewall/www/ProfferFramework/app/library/firephp.php">
+		<error severity="warning" line="48" message="Existing documentation &quot;mixed $Object&quot; of nonexistent parameter of function fb()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="67" message="Missing documentation of trait library\FB" source="ApiGen.Documentation.Documentation"/>
+		<error severity="warning" line="141" message="Existing documentation &quot;mixed $object&quot; of nonexistent parameter of method library\FB::send()" source="ApiGen.Documentation.Documentation"/>
+	</file>
+	<file name="/home/firewall/www/ProfferFramework/app/library/Growl.php">
+		<error severity="error" line="8" message="Missing documentation of constant library_Growl::GROWL_PRIORITY_LOW" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="9" message="Missing documentation of constant library_Growl::GROWL_PRIORITY_MODERATE" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="10" message="Missing documentation of constant library_Growl::GROWL_PRIORITY_NORMAL" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="11" message="Missing documentation of constant library_Growl::GROWL_PRIORITY_HIGH" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="12" message="Missing documentation of constant library_Growl::GROWL_PRIORITY_EMERGENCY" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="20" message="Missing documentation of method library_Growl::__construct()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="29" message="Missing documentation of method library_Growl::addNotification()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="34" message="Missing documentation of method library_Growl::register()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="57" message="Missing documentation of method library_Growl::notify()" source="ApiGen.Documentation.Documentation"/>
+	</file>
+	<file name="/home/firewall/www/ProfferFramework/app/library/i18n.php">
+		<error severity="error" line="28" message="Missing documentation of class library\i18n" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="29" message="Missing documentation of property library\i18n::$lang" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="30" message="Missing documentation of property library\i18n::$ISO639_2" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="104" message="Missing documentation of method library\i18n::getInstance()" source="ApiGen.Documentation.Documentation"/>
+	</file>
+	<file name="/home/firewall/www/ProfferFramework/app/library/lessc.php">
+		<error severity="error" line="42" message="Missing documentation of property library\lessc::$VERSION" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="43" message="Missing documentation of property library\lessc::$TRUE" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="44" message="Missing documentation of property library\lessc::$FALSE" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="46" message="Missing documentation of property library\lessc::$libFunctions" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="47" message="Missing documentation of property library\lessc::$registeredVars" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="48" message="Missing documentation of property library\lessc::$preserveComments" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="50" message="Missing documentation of property library\lessc::$vPrefix" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="51" message="Missing documentation of property library\lessc::$mPrefix" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="52" message="Missing documentation of property library\lessc::$parentSelector" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="54" message="Missing documentation of property library\lessc::$importDisabled" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="55" message="Missing documentation of property library\lessc::$importDir" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="57" message="Missing documentation of property library\lessc::$numberPrecision" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="61" message="Missing documentation of property library\lessc::$sourceParser" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="62" message="Missing documentation of property library\lessc::$sourceLoc" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="64" message="Missing documentation of property library\lessc::$defaultValue" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="66" message="Missing documentation of property library\lessc::$nextImportId" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="69" message="Missing documentation of method library\lessc::findImport()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="80" message="Missing documentation of method library\lessc::fileExists()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="84" message="Missing documentation of method library\lessc::compressList()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="89" message="Missing documentation of method library\lessc::preg_quote()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="93" message="Missing documentation of method library\lessc::tryImport()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="146" message="Missing documentation of method library\lessc::compileImportedProps()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="163" message="Missing documentation of parameter library\lessc::compileBlock($block)" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="208" message="Missing documentation of method library\lessc::compileCSSBlock()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="222" message="Missing documentation of method library\lessc::compileMedia()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="247" message="Missing documentation of method library\lessc::mediaParent()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="258" message="Missing documentation of method library\lessc::compileNestedBlock()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="269" message="Missing documentation of method library\lessc::compileRoot()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="276" message="Missing documentation of method library\lessc::compileProps()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="282" message="Missing documentation of method library\lessc::sortProps()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="314" message="Missing documentation of method library\lessc::compileMediaQuery()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="347" message="Missing documentation of method library\lessc::multiplyMedia()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="374" message="Missing documentation of method library\lessc::expandParentSelectors()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="385" message="Missing documentation of method library\lessc::findClosestSelectors()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="401" message="Missing documentation of method library\lessc::multiplySelectors()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="432" message="Missing documentation of method library\lessc::compileSelectors()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="447" message="Missing documentation of method library\lessc::eq()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="451" message="Missing documentation of method library\lessc::patternMatch()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="524" message="Missing documentation of method library\lessc::patternMatchAll()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="536" message="Missing documentation of method library\lessc::findBlocks()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="575" message="Missing documentation of method library\lessc::zipSetArgs()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="604" message="Missing documentation of method library\lessc::compileProp()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="715" message="Missing documentation of parameter library\lessc::compileValue($value)" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="715" message="Missing documentation of return value of method library\lessc::compileValue()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="790" message="Missing documentation of method library\lessc::lib_isnumber()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="794" message="Missing documentation of method library\lessc::lib_isstring()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="798" message="Missing documentation of method library\lessc::lib_iscolor()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="802" message="Missing documentation of method library\lessc::lib_iskeyword()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="806" message="Missing documentation of method library\lessc::lib_ispixel()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="810" message="Missing documentation of method library\lessc::lib_ispercentage()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="814" message="Missing documentation of method library\lessc::lib_isem()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="818" message="Missing documentation of method library\lessc::lib_isrem()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="822" message="Missing documentation of method library\lessc::lib_rgbahex()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="832" message="Missing documentation of method library\lessc::lib_argb()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="837" message="Missing documentation of method library\lessc::lib_e()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="855" message="Missing documentation of method library\lessc::lib__sprintf()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="883" message="Missing documentation of method library\lessc::lib_floor()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="888" message="Missing documentation of method library\lessc::lib_ceil()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="893" message="Missing documentation of method library\lessc::lib_round()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="898" message="Missing documentation of parameter library\lessc::colorArgs($args)" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="898" message="Missing documentation of return value of method library\lessc::colorArgs()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="913" message="Missing documentation of method library\lessc::lib_darken()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="921" message="Missing documentation of method library\lessc::lib_lighten()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="929" message="Missing documentation of method library\lessc::lib_saturate()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="937" message="Missing documentation of method library\lessc::lib_desaturate()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="945" message="Missing documentation of method library\lessc::lib_spin()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="956" message="Missing documentation of method library\lessc::lib_fadeout()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="962" message="Missing documentation of method library\lessc::lib_fadein()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="968" message="Missing documentation of method library\lessc::lib_hue()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="973" message="Missing documentation of method library\lessc::lib_saturation()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="978" message="Missing documentation of method library\lessc::lib_lightness()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="985" message="Missing documentation of method library\lessc::lib_alpha()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="992" message="Missing documentation of method library\lessc::lib_fade()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="998" message="Missing documentation of method library\lessc::lib_percentage()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="1006" message="Missing documentation of method library\lessc::lib_mix()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="1037" message="Missing documentation of method library\lessc::lib_contrast()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="1056" message="Missing documentation of method library\lessc::assertColor()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="1062" message="Missing documentation of method library\lessc::assertNumber()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="1067" message="Missing documentation of method library\lessc::toHSL()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="1102" message="Missing documentation of method library\lessc::toRGB_helper()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="1113" message="Missing documentation of parameter library\lessc::toRGB($color)" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="1113" message="Missing documentation of return value of method library\lessc::toRGB()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="1144" message="Missing documentation of method library\lessc::clamp()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="1148" message="Missing documentation of return value of method library\lessc::funcToColor()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="1148" message="Missing documentation of parameter library\lessc::funcToColor($func)" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="1204" message="Missing documentation of method library\lessc::reduce()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="1306" message="Missing documentation of method library\lessc::coerceColor()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="1338" message="Missing documentation of method library\lessc::coerceString()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="1349" message="Missing documentation of method library\lessc::flattenList()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="1356" message="Missing documentation of method library\lessc::toBool()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="1362" message="Missing documentation of method library\lessc::evaluate()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="1407" message="Missing documentation of method library\lessc::stringConcatenate()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="1424" message="Missing documentation of method library\lessc::fixColor()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="1433" message="Missing documentation of method library\lessc::op_number_color()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="1439" message="Missing documentation of method library\lessc::op_color_number()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="1446" message="Missing documentation of method library\lessc::op_color_color()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="1476" message="Missing documentation of method library\lessc::lib_red()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="1485" message="Missing documentation of method library\lessc::lib_green()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="1494" message="Missing documentation of method library\lessc::lib_blue()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="1505" message="Missing documentation of method library\lessc::op_number_number()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="1544" message="Missing documentation of method library\lessc::makeOutputBlock()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="1555" message="Missing documentation of method library\lessc::pushEnv()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="1566" message="Missing documentation of method library\lessc::popEnv()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="1573" message="Missing documentation of method library\lessc::set()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="1579" message="Missing documentation of method library\lessc::get()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="1600" message="Missing documentation of method library\lessc::injectVariables()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="1615" message="Missing documentation of parameter library\lessc::__construct($fname)" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="1626" message="Missing documentation of method library\lessc::compile()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="1652" message="Missing documentation of method library\lessc::compileFile()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="1679" message="Missing documentation of method library\lessc::checkedCompile()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="1753" message="Missing documentation of method library\lessc::parse()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="1778" message="Missing documentation of method library\lessc::makeParser()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="1785" message="Missing documentation of method library\lessc::setFormatter()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="1789" message="Missing documentation of method library\lessc::newFormatter()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="1800" message="Missing documentation of method library\lessc::setPreserveComments()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="1804" message="Missing documentation of method library\lessc::registerFunction()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="1808" message="Missing documentation of method library\lessc::unregisterFunction()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="1812" message="Missing documentation of method library\lessc::setVariables()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="1816" message="Missing documentation of method library\lessc::unsetVariable()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="1820" message="Missing documentation of method library\lessc::setImportDir()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="1824" message="Missing documentation of method library\lessc::addImportDir()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="1829" message="Missing documentation of method library\lessc::allParsedFiles()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="1833" message="Missing documentation of method library\lessc::addParsedFile()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="1837" message="Missing documentation of throwing an exception of method library\lessc::throwError()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="1837" message="Missing documentation of parameter library\lessc::throwError($msg)" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="1849" message="Missing documentation of method library\lessc::ccompile()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="1856" message="Missing documentation of method library\lessc::cexecute()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="1863" message="Missing documentation of property library\lessc::$cssColors" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="2017" message="Missing documentation of class library\lessc_parser" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="2018" message="Missing documentation of property library\lessc_parser::$nextBlockId" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="2020" message="Missing documentation of property library\lessc_parser::$precedence" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="2034" message="Missing documentation of property library\lessc_parser::$whitePattern" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="2035" message="Missing documentation of property library\lessc_parser::$commentMulti" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="2037" message="Missing documentation of property library\lessc_parser::$commentSingle" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="2038" message="Missing documentation of property library\lessc_parser::$commentMultiLeft" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="2039" message="Missing documentation of property library\lessc_parser::$commentMultiRight" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="2042" message="Missing documentation of property library\lessc_parser::$operatorString" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="2045" message="Missing documentation of property library\lessc_parser::$supressDivisionProps" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="2048" message="Missing documentation of property library\lessc_parser::$blockDirectives" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="2049" message="Missing documentation of property library\lessc_parser::$lineDirectives" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="2051" message="Missing documentation of the data type of property library\lessc_parser::$inParens" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="2063" message="Missing documentation of property library\lessc_parser::$literalCache" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="2065" message="Missing documentation of method library\lessc_parser::__construct()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="2086" message="Missing documentation of method library\lessc_parser::parse()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="2117" message="Missing documentation of return value of method library\lessc_parser::parseChunk()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="2301" message="Missing documentation of method library\lessc_parser::isDirective()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="2310" message="Missing documentation of method library\lessc_parser::fixTags()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="2320" message="Missing documentation of method library\lessc_parser::expressionList()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="2333" message="Missing documentation of return value of method library\lessc_parser::expression()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="2333" message="Missing documentation of parameter library\lessc_parser::expression($out)" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="2358" message="Missing documentation of parameter library\lessc_parser::expHelper($lhs)" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="2358" message="Missing documentation of return value of method library\lessc_parser::expHelper()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="2358" message="Missing documentation of parameter library\lessc_parser::expHelper($minP)" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="2409" message="Missing documentation of method library\lessc_parser::propertyValue()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="2431" message="Missing documentation of method library\lessc_parser::parenValue()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="2456" message="Missing documentation of method library\lessc_parser::value()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="2511" message="Missing documentation of method library\lessc_parser::import()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="2525" message="Missing documentation of method library\lessc_parser::mediaQueryList()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="2533" message="Missing documentation of method library\lessc_parser::mediaQuery()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="2566" message="Missing documentation of method library\lessc_parser::mediaExpression()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="2584" message="Missing documentation of method library\lessc_parser::openString()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="2653" message="Missing documentation of method library\lessc_parser::string()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="2704" message="Missing documentation of method library\lessc_parser::interpolation()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="2724" message="Missing documentation of method library\lessc_parser::unit()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="2739" message="Missing documentation of method library\lessc_parser::color()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="2753" message="Missing documentation of method library\lessc_parser::argumentValues()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="2779" message="Missing documentation of method library\lessc_parser::argumentDef()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="2828" message="Missing documentation of method library\lessc_parser::tags()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="2841" message="Missing documentation of method library\lessc_parser::mixinTags()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="2855" message="Missing documentation of method library\lessc_parser::tagBracket()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="2876" message="Missing documentation of method library\lessc_parser::tagExpression()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="2888" message="Missing documentation of method library\lessc_parser::tag()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="2923" message="Missing documentation of method library\lessc_parser::func()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="2966" message="Missing documentation of method library\lessc_parser::variable()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="2984" message="Missing documentation of parameter library\lessc_parser::assign($name)" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="2984" message="Missing documentation of return value of method library\lessc_parser::assign()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="2994" message="Missing documentation of method library\lessc_parser::keyword()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="3003" message="Missing documentation of method library\lessc_parser::end()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="3013" message="Missing documentation of method library\lessc_parser::guards()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="3039" message="Missing documentation of method library\lessc_parser::guardGroup()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="3056" message="Missing documentation of method library\lessc_parser::guard()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="3072" message="Missing documentation of method library\lessc_parser::literal()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="3095" message="Missing documentation of method library\lessc_parser::genericList()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="3123" message="Missing documentation of method library\lessc_parser::to()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="3136" message="Missing documentation of method library\lessc_parser::match()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="3149" message="Missing documentation of method library\lessc_parser::whitespace()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="3168" message="Missing documentation of method library\lessc_parser::peek()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="3177" message="Missing documentation of method library\lessc_parser::seek()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="3185" message="Missing documentation of method library\lessc_parser::throwError()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="3205" message="Missing documentation of method library\lessc_parser::pushBlock()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="3223" message="Missing documentation of method library\lessc_parser::pushSpecialBlock()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="3228" message="Missing documentation of method library\lessc_parser::append()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="3234" message="Missing documentation of method library\lessc_parser::pop()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="3242" message="Missing documentation of method library\lessc_parser::removeComments()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="3299" message="Missing documentation of class library\lessc_formatter_classic" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="3300" message="Missing documentation of property library\lessc_formatter_classic::$indentChar" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="3302" message="Missing documentation of property library\lessc_formatter_classic::$break" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="3303" message="Missing documentation of property library\lessc_formatter_classic::$open" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="3304" message="Missing documentation of property library\lessc_formatter_classic::$close" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="3305" message="Missing documentation of property library\lessc_formatter_classic::$selectorSeparator" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="3306" message="Missing documentation of property library\lessc_formatter_classic::$assignSeparator" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="3308" message="Missing documentation of property library\lessc_formatter_classic::$openSingle" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="3309" message="Missing documentation of property library\lessc_formatter_classic::$closeSingle" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="3311" message="Missing documentation of property library\lessc_formatter_classic::$disableSingle" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="3312" message="Missing documentation of property library\lessc_formatter_classic::$breakSelectors" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="3314" message="Missing documentation of property library\lessc_formatter_classic::$compressColors" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="3316" message="Missing documentation of method library\lessc_formatter_classic::__construct()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="3320" message="Missing documentation of method library\lessc_formatter_classic::indentStr()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="3324" message="Missing documentation of method library\lessc_formatter_classic::property()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="3328" message="Missing documentation of method library\lessc_formatter_classic::isEmpty()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="3339" message="Missing documentation of method library\lessc_formatter_classic::block()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="3394" message="Missing documentation of class library\lessc_formatter_compressed" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="3395" message="Missing documentation of property library\lessc_formatter_compressed::$disableSingle" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="3396" message="Missing documentation of property library\lessc_formatter_compressed::$open" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="3397" message="Missing documentation of property library\lessc_formatter_compressed::$selectorSeparator" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="3398" message="Missing documentation of property library\lessc_formatter_compressed::$assignSeparator" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="3399" message="Missing documentation of property library\lessc_formatter_compressed::$break" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="3400" message="Missing documentation of property library\lessc_formatter_compressed::$compressColors" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="3402" message="Missing documentation of method library\lessc_formatter_compressed::indentStr()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="3407" message="Missing documentation of class library\lessc_formatter_lessjs" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="3408" message="Missing documentation of property library\lessc_formatter_lessjs::$disableSingle" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="3409" message="Missing documentation of property library\lessc_formatter_lessjs::$breakSelectors" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="3410" message="Missing documentation of property library\lessc_formatter_lessjs::$assignSeparator" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="3411" message="Missing documentation of property library\lessc_formatter_lessjs::$selectorSeparator" source="ApiGen.Documentation.Documentation"/>
+	</file>
+	<file name="/home/firewall/www/ProfferFramework/app/library/libFirePHP.php">
+		<error severity="error" line="287" message="Missing documentation of throwing an exception of method library\libFirePHP::setLogToInsightConsole()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="399" message="Missing documentation of parameter library\libFirePHP::registerErrorHandler($throwErrorExceptions)" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="418" message="Missing documentation of throwing an exception of method library\libFirePHP::errorHandler()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="482" message="Missing documentation of throwing an exception of method library\libFirePHP::registerAssertionHandler()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="501" message="Missing documentation of throwing an exception of method library\libFirePHP::assertionHandler()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="569" message="Missing documentation of parameter library\libFirePHP::log($options)" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="583" message="Missing documentation of parameter library\libFirePHP::info($options)" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="597" message="Missing documentation of parameter library\libFirePHP::warn($options)" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="611" message="Missing documentation of parameter library\libFirePHP::error($options)" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="625" message="Missing documentation of parameter library\libFirePHP::dump($options)" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="661" message="Missing documentation of parameter library\libFirePHP::table($options)" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="675" message="Missing documentation of throwing an exception of method library\libFirePHP::to()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="675" message="Missing documentation of return value of method library\libFirePHP::to()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="690" message="Missing documentation of throwing an exception of method library\libFirePHP::plugin()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="690" message="Missing documentation of return value of method library\libFirePHP::plugin()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="1141" message="Missing documentation of return value of method library\libFirePHP::headersSent()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="1152" message="Missing documentation of return value of method library\libFirePHP::setHeader()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="1200" message="Missing documentation of parameter library\libFirePHP::getRequestHeader($name)" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="1276" message="Missing documentation of parameter library\libFirePHP::encodeObject($maxDepth)" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="1276" message="Missing documentation of parameter library\libFirePHP::encodeObject($arrayDepth)" source="ApiGen.Documentation.Documentation"/>
+	</file>
+	<file name="/home/firewall/www/ProfferFramework/app/library/pSmarty.php">
+		<error severity="error" line="4" message="Missing documentation of class pSmarty" source="ApiGen.Documentation.Documentation"/>
+	</file>
+	<file name="/home/firewall/www/ProfferFramework/app/library/Template.php">
+		<error severity="error" line="16" message="Missing documentation of class library\Template" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="50" message="Missing documentation of method library\Template::tfetch()" source="ApiGen.Documentation.Documentation"/>
+	</file>
+	<file name="/home/firewall/www/ProfferFramework/app/Model/interfaces/Model.php">
+		<error severity="error" line="11" message="Missing documentation of interface Model\interfaces\Model" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="12" message="Missing documentation of method Model\interfaces\Model::save()" source="ApiGen.Documentation.Documentation"/>
+	</file>
+	<file name="/home/firewall/www/ProfferFramework/app/Model/ModelAbstract.php">
+		<error severity="error" line="13" message="Missing documentation of class Model\ModelAbstract" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="14" message="Missing documentation of property Model\ModelAbstract::$table" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="15" message="Missing documentation of property Model\ModelAbstract::$profile" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="16" message="Missing documentation of property Model\ModelAbstract::$id" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="19" message="Missing documentation of method Model\ModelAbstract::fetch()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="34" message="Missing documentation of throwing an exception of method Model\ModelAbstract::save()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="34" message="Missing documentation of return value of method Model\ModelAbstract::save()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="89" message="Missing documentation of method Model\ModelAbstract::makeValuesReferenced()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="95" message="Missing documentation of method Model\ModelAbstract::__get()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="96" message="Missing documentation of method Model\ModelAbstract::__set()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="98" message="Missing documentation of method Model\ModelAbstract::toArray()" source="ApiGen.Documentation.Documentation"/>
+	</file>
+	<file name="/home/firewall/www/ProfferFramework/app/Model/User.php">
+		<error severity="error" line="6" message="Missing documentation of class Model\User" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="8" message="Missing documentation of property Model\User::$table" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="10" message="Missing documentation of property Model\User::$id" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="12" message="Missing documentation of property Model\User::$type" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="14" message="Missing documentation of property Model\User::$orm" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="22" message="Missing documentation of method Model\User::__construct()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="35" message="Missing documentation of return value of method Model\User::save()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="45" message="Missing documentation of method Model\User::isAdmin()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="55" message="Missing documentation of method Model\User::validateEmail()" source="ApiGen.Documentation.Documentation"/>
+	</file>
+	<file name="/home/firewall/www/ProfferFramework/app/utils/recaptcha.php">
+		<error severity="warning" line="42" message="Invalid documentation &quot;$data - array of string elements to be encoded&quot; of parameter _recaptcha_qsencode($data)" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="138" message="Missing documentation of property ReCaptchaResponse::$is_valid" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="139" message="Missing documentation of property ReCaptchaResponse::$error" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="195" message="Missing documentation of return value of function recaptcha_get_signup_url()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="206" message="Missing documentation of function _recaptcha_aes_pad()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="214" message="Missing documentation of function _recaptcha_aes_encrypt()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="225" message="Missing documentation of function _recaptcha_mailhide_urlbase64()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="230" message="Missing documentation of function recaptcha_mailhide_url()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="243" message="Missing documentation of return value of function _recaptcha_mailhide_email_parts()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="243" message="Missing documentation of parameter _recaptcha_mailhide_email_parts($email)" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="261" message="Missing documentation of return value of function recaptcha_mailhide_html()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="261" message="Missing documentation of parameter recaptcha_mailhide_html($privkey)" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="261" message="Missing documentation of parameter recaptcha_mailhide_html($pubkey)" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="261" message="Missing documentation of parameter recaptcha_mailhide_html($email)" source="ApiGen.Documentation.Documentation"/>
+	</file>
+	<file name="/home/firewall/www/ProfferFramework/app/utils/SecurityManager.php">
+		<error severity="error" line="11" message="Missing documentation of class utils\SecurityManager" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="46" message="Missing documentation of method utils\SecurityManager::GenerateReferenceToken()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="68" message="Missing documentation of parameter utils\SecurityManager::ValidateToken($name)" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="85" message="Missing documentation of parameter utils\SecurityManager::GenPW($len)" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="85" message="Missing documentation of parameter utils\SecurityManager::GenPW($type)" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="85" message="Missing description of method utils\SecurityManager::GenPW()" source="ApiGen.Documentation.Documentation"/>
+	</file>
+</checkstyle>
