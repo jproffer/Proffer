@@ -16,67 +16,15 @@
 		public $_mysql_errmsg;
 		public $_mysql_errcode;
 		private static $_mysql_sql = array();
+		private static $db = null;
 		public $conn;
 
-	/**
-	 * Array for converting MYSQLI_*_FLAG constants to text values
-	 * @var	array
-	 * @access public
-	 * @since  Property available since Release 1.6.5
-	 */
-	protected $mysqli_flags = array(
-		MYSQLI_NOT_NULL_FLAG		=> 'not_null',
-		MYSQLI_PRI_KEY_FLAG			=> 'primary_key',
-		MYSQLI_UNIQUE_KEY_FLAG		=> 'unique_key',
-		MYSQLI_MULTIPLE_KEY_FLAG	=> 'multiple_key',
-		MYSQLI_BLOB_FLAG			=> 'blob',
-		MYSQLI_UNSIGNED_FLAG		=> 'unsigned',
-		MYSQLI_ZEROFILL_FLAG		=> 'zerofill',
-		MYSQLI_AUTO_INCREMENT_FLAG	=> 'auto_increment',
-		MYSQLI_TIMESTAMP_FLAG		=> 'timestamp',
-		MYSQLI_SET_FLAG				=> 'set',
-		// MYSQLI_NUM_FLAG			 => 'numeric',  // unnecessary
-		// MYSQLI_PART_KEY_FLAG		=> 'multiple_key',  // duplicatvie
-		MYSQLI_GROUP_FLAG			=> 'group_by'
-	);
-
-	/**
-	 * Array for converting MYSQLI_TYPE_* constants to text values
-	 * @var	array
-	 * @access public
-	 * @since  Property available since Release 1.6.5
-	 */
-	protected $mysqli_types = array(
-		MYSQLI_TYPE_DECIMAL	 => 'decimal',
-		MYSQLI_TYPE_TINY		=> 'tinyint',
-		MYSQLI_TYPE_SHORT	   => 'int',
-		MYSQLI_TYPE_LONG		=> 'int',
-		MYSQLI_TYPE_FLOAT	   => 'float',
-		MYSQLI_TYPE_DOUBLE	  => 'double',
-		// MYSQLI_TYPE_NULL		=> 'DEFAULT NULL',  // let flags handle it
-		MYSQLI_TYPE_TIMESTAMP   => 'timestamp',
-		MYSQLI_TYPE_LONGLONG	=> 'bigint',
-		MYSQLI_TYPE_INT24	   => 'mediumint',
-		MYSQLI_TYPE_DATE		=> 'date',
-		MYSQLI_TYPE_TIME		=> 'time',
-		MYSQLI_TYPE_DATETIME	=> 'datetime',
-		MYSQLI_TYPE_YEAR		=> 'year',
-		MYSQLI_TYPE_NEWDATE	 => 'date',
-		MYSQLI_TYPE_ENUM		=> 'enum',
-		MYSQLI_TYPE_SET		 => 'set',
-		MYSQLI_TYPE_TINY_BLOB   => 'tinyblob',
-		MYSQLI_TYPE_MEDIUM_BLOB => 'mediumblob',
-		MYSQLI_TYPE_LONG_BLOB   => 'longblob',
-		MYSQLI_TYPE_BLOB		=> 'blob',
-		MYSQLI_TYPE_VAR_STRING  => 'varchar',
-		MYSQLI_TYPE_STRING	  => 'char',
-		MYSQLI_TYPE_GEOMETRY	=> 'geometry',
-		/* These constants are conditionally compiled in ext/mysqli, so we'll
-		 * define them by number rather than constant. */
-		16					  => 'bit',
-		246					 => 'decimal',
-	);
-
+		public static function getInstance() {
+			if (self::$db == null) {
+				self::$db = new MDbm();
+			}
+			return self::$db;
+		}
 
 		public function __construct() {
 			global $DB_CONNECTOR;
@@ -107,6 +55,8 @@
 		 if ($result==false||!empty($this->error)) {
 			$this->_mysql_errcode=mysqli_errno($this);
 			$this->_mysql_errmsg=mysqli_error($this);
+			echo "error: {$this->error}";exit;
+			echo "error: {$this->_mysql_error}";
 			$this->PrintError();
 		 }
 			return $result;

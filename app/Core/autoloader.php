@@ -33,7 +33,7 @@ class AutoLoader {
 			$base = realpath(dirname(__FILE__)."/../../");
 			$path = trim($path, "/");
 			if (!is_dir("$base/$path")) {
-				echo "error: $base/$path does not exist!";
+				FB::log("error: $base/$path does not exist!");
 				exit;
 			}
 			self::$PathList[]="$base/$path";
@@ -44,7 +44,9 @@ class AutoLoader {
 		if (substr($class,0,7) == 'Smarty_') { // stupid smarty CaMeLcAsE
 			$class = strtolower($class);
 		}
-		$classFile = str_replace('\\', '/', $class) . '.php';
+		$_classFile = str_replace('\\', '/', $class);
+		$_split = explode("/", $_classFile);
+		$classFile = "$_classFile.php";
 		foreach (self::$PathList as $path) {
 			if (file_exists("$path/$classFile")) {
 				require_once("$path/$classFile");

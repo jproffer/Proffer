@@ -1,4 +1,5 @@
 <?php
+die("Please use MasterAbstract instead of MAbstract.");
 /**
 	* Core abstract class.  Extends MySQLi
 	* @author Johnathan Proffer
@@ -20,8 +21,8 @@
 			MasterAbstract::__destruct as private __masterDestruct;
 		}
 		
-		public function __construct(\Core\Uri $uri=null) {
-			$this->__masterConstruct($uri);
+		public function __construct(\Core\Uri $uri=null, $noauth=false) {
+			$this->__masterConstruct($uri, $noauth);
 			parent::__construct();
 		}
 		public function __destruct() {

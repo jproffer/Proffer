@@ -11,13 +11,17 @@ namespace Core;
 class Uri {
 	public function __construct() {
 		global $userpath;
-		$this->params=array();
+		$this->params= [];
+		// parse uri vars
 		$_request=explode("?",$_SERVER['REQUEST_URI'],2);
 		$request=$_request[0];
 		$request=explode("/",$request);
 		array_shift($request);
 		$this->controller = ucwords(strtolower(array_shift($request)));
-		$this->function=ltrim(strtolower(array_shift($request)),"__");
+		if (!empty($this->controller)) {
+			$this->function=ltrim(strtolower(array_shift($request)),"__");
+		}
+		
 		// convert ?key=val&key=val to /key/val/key/val
 		if (count($_request)>1) {
 			$str=explode("&",$_request[1]);
@@ -43,7 +47,10 @@ class Uri {
 				$this->params[$var]=$val;
 			}
 		}
-		$this->params=$this->decode($this->params);
+//		$fp = fopen("/tmp/rq.txt", "a+");
+//		fwrite($fp, print_r($this->params,true));
+//		fclose($fp);
+//		$this->params=$this->decode($this->params);
 	}
 	
 	/**

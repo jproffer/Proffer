@@ -9,18 +9,21 @@
 	namespace Core;
 	use		Core\Exceptions\InterfaceException,
 			Core\Mobile,
-			library\FB;
+			\library\FB,
+			\library\lessc;
 
-	trait MasterAbstract {
+	class MasterAbstract {
 		private $_consolemsgs=array();
 		private $_css=array();
 		private $_iecss = array();
 		private $_js=array();
 		private $_csstype="screen";
 		private $view = array();
+		
 		public static $jsLibraries = array();
 		private static $_HaveCalledConstructor=false;
 		protected static $_vars = array();
+		protected static $dbm = null;
 		
 		protected static $protected = array("_vars","jsLibraries","_csstype","_js","_css","_consolemsgs","config");
 		
@@ -135,8 +138,10 @@
 		protected function CheckAuth() {
 			// a list of "public" classes that can be accessed without being logged in.
 			global $PUBLIC_CONTROLLERS;
-			if (!isset($_SESSION['user'])) {	
-				if (!in_array(get_called_class(),$PUBLIC_CONTROLLERS)) {
+			if (get_called_class() == 'Controller\Api') { return; }
+			$user = $_SESSION['user'];
+			if (!isset($user)) {
+				if (in_array(get_called_class(),$PUBLIC_CONTROLLERS) === false) {
 					header("Location:/auth/login/",true,301);
 					exit;
 				}
@@ -155,14 +160,24 @@
 			$vars = $cls->getProperties(\ReflectionProperty::IS_PUBLIC | \ReflectionProperty::IS_PROTECTED);
 		}
 		
-		public function __construct(\Core\Uri $uri=null) {
-		//
+		public function __wakeup() {
+			if (self::$dbm == null) { 
+				self::$dbm = MDbm::getInstance();
+			}
+		}
+		
+		public function __construct(\Core\Uri $uri=null, $noauth=false) {
 			global $__CORE_ABSTRACT_CONSTRUCTOR;
 			$__CORE_ABSTRACT_CONSTRUCTOR = true;
 			$calledClass = get_called_class();
+			if (self::$dbm == null) { 
+				self::$dbm = MDbm::getInstance();
+			}
 			self::CheckInterface($calledClass);
 			self::CheckProtectedVars($calledClass);
-			self::CheckAuth();
+			if (!$noauth) {
+				self::CheckAuth();
+			}
 			global	$TRACE, $themepath, $userpath;
 		
 			$this->uri=$uri;
@@ -227,7 +242,10 @@
 						if (file_exists($outfile)) {
 							unlink($outfile);
 						}
-						\library\lessc::ccompile($file,$outfile);
+						if (!is_readable($file)) {
+							throw new Exception("Unable to read $file");
+						}
+						lessc::ccompile($file, $outfile);
 						$file = "/cache/css/$compileFile";
 						
 						$this->addCSS($file,true);
@@ -238,7 +256,7 @@
 				}
 				$cont = str_replace("Controller\\", "", $uri->controller);
 				if (file_exists(PATH_ROOT."$themepath/{$userpath}/$cont/{$uri->function}.css")) {
-					 $crc32=crc32(file_get_contents(PATH_ROOT."$themepath/$cont/{$uri->function}.css"));
+					 $crc32=crc32(file_get_contents(PATH_ROOT."$themepath/{$userpath}/$cont/{$uri->function}.css"));
 					$this->addCSS("/get/css/name/{$userpath}_{$cont}_{$uri->function}/hash/$crc32",true);
 				}
 			}
@@ -346,7 +364,10 @@
 		}
 		
 		public function toArray() {
-			return self::$_vars;
+			$_tmp = self::$_vars;
+			unset($_tmp['orm']);
+			unset($_tmp['table']);
+			return $_tmp;
 		}
 		
 		/**
