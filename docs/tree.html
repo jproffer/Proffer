@@ -7,7 +7,7 @@
 	<title>Tree</title>
 
 	<script type="text/javascript" src="resources/combined.js?699355046"></script>
-	<script type="text/javascript" src="elementlist.js?1127033442"></script>
+	<script type="text/javascript" src="elementlist.js?3525666960"></script>
 	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3505392360" />
 
 </head>
@@ -62,13 +62,14 @@
 				<li><a href="class-Core.GAbstract.html">Core\GAbstract</a></li>
 				<li><a href="class-Core.GDbm.html">Core\GDbm</a></li>
 				<li><a href="class-Core.MAbstract.html">Core\MAbstract</a></li>
+				<li><a href="class-Core.MasterAbstract.html">Core\MasterAbstract</a></li>
 				<li><a href="class-Core.MDbm.html">Core\MDbm</a></li>
 				<li><a href="class-Core.Mobile.html">Core\Mobile</a></li>
 				<li><a href="class-Core.Sessions.html">Core\Sessions</a></li>
-				<li><a href="class-Core.SysUpgrade.html">Core\SysUpgrade</a></li>
 				<li><a href="class-Core.Uri.html">Core\Uri</a></li>
 				<li><a href="class-library.benchmark.html">library\benchmark</a></li>
 				<li><a href="class-library.crypto.html">library\crypto</a></li>
+				<li><a href="class-library.Growl.html">library\Growl</a></li>
 				<li><a href="class-library.i18n.html">library\i18n</a></li>
 				<li><a href="class-library.lessc.html">library\lessc</a></li>
 				<li><a href="class-library.lessc_formatter_classic.html">library\lessc_formatter_classic</a></li>
@@ -77,7 +78,6 @@
 				<li><a href="class-library.lessc_parser.html">library\lessc_parser</a></li>
 				<li><a href="class-library.libFirePHP.html">library\libFirePHP</a></li>
 				<li><a href="class-library.Template.html">library\Template</a></li>
-				<li><a href="class-library_Growl.html">library_Growl</a></li>
 				<li><a href="class-Model.ModelAbstract.html">Model\ModelAbstract</a></li>
 				<li><a href="class-Model.User.html">Model\User</a></li>
 				<li><a href="class-mysqli.html">mysqli</a></li>
@@ -91,11 +91,11 @@
 				<li><a href="class-Core_Interface.html">Core_Interface</a></li>
 				<li><a href="class-Interfaces.iAbstract.html">Interfaces\iAbstract</a></li>
 				<li><a href="class-Model.interfaces.Model.html">Model\interfaces\Model</a></li>
+				<li><a href="class-SessionHandlerInterface.html">SessionHandlerInterface</a></li>
 			</ul>
 
 			<h3>Traits</h3>
 			<ul>
-				<li><a href="class-Core.MasterAbstract.html">Core\MasterAbstract</a></li>
 				<li><a href="class-library.FB.html">library\FB</a></li>
 			</ul>
 
@@ -203,6 +203,13 @@
 
 				</ul></li>
 
+			<li><div class="notlast"><a href="class-Core.MasterAbstract.html"><span>Core\MasterAbstract</span></a>
+			
+			
+			</div>
+
+				</li>
+
 			<li><div class="notlast"><a href="class-Core.Mobile.html"><span>Core\Mobile</span></a>
 			
 			
@@ -210,7 +217,9 @@
 
 				</li>
 
-			<li><div class="notlast"><a href="class-Core.SysUpgrade.html"><span>Core\SysUpgrade</span></a>
+			<li><div class="notlast"><a href="class-Core.Sessions.html"><span>Core\Sessions</span></a>
+			 implements 
+				<a href="class-SessionHandlerInterface.html"><span>SessionHandlerInterface</span></a>
 			
 			
 			</div>
@@ -275,6 +284,13 @@
 			</div>
 
 				</ul></li>
+
+			<li><div class="notlast"><a href="class-library.Growl.html"><span>library\Growl</span></a>
+			
+			
+			</div>
+
+				</li>
 
 			<li><div class="notlast"><a href="class-library.benchmark.html"><span>library\benchmark</span></a>
 			
@@ -341,13 +357,6 @@
 
 				</li>
 
-			<li><div class="notlast"><a href="class-library_Growl.html"><span>library_Growl</span></a>
-			
-			
-			</div>
-
-				</li>
-
 			<li><div class="notlast"><a href="class-mysqli.html"><span>mysqli</span></a>
 			
 			
@@ -362,7 +371,7 @@
 
 				<ul>
 
-			<li><div class="notlast"><a href="class-Core.MAbstract.html"><span>Core\MAbstract</span></a>
+			<li class="last"><div class="last"><a href="class-Core.MAbstract.html"><span>Core\MAbstract</span></a>
 			
 			 uses 
 				<a href="class-Core.MasterAbstract.html"><span>Core\MasterAbstract</span></a>
@@ -387,14 +396,7 @@
 			
 			</div>
 
-				</ul></li>
-
-			<li class="last"><div class="last"><a href="class-Core.Sessions.html"><span>Core\Sessions</span></a>
-			
-			
-			</div>
-
-				</ul></li></ul></li>
+				</ul></li></ul></li></ul></li>
 
 			<li class="last"><div class="last"><a href="class-utils.SecurityManager.html"><span>utils\SecurityManager</span></a>
 			
@@ -424,7 +426,14 @@
 
 				</li>
 
-			<li class="last"><div class="last"><a href="class-Model.interfaces.Model.html"><span>Model\interfaces\Model</span></a>
+			<li><div class="notlast"><a href="class-Model.interfaces.Model.html"><span>Model\interfaces\Model</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li class="last"><div class="last"><a href="class-SessionHandlerInterface.html"><span>SessionHandlerInterface</span></a>
 			
 			
 			</div>
@@ -437,13 +446,6 @@
 		<h3>Traits</h3>
 <div class="tree">
 	<ul>
-
-			<li><div class="notlast"><a href="class-Core.MasterAbstract.html"><span>Core\MasterAbstract</span></a>
-			
-			
-			</div>
-
-				</li>
 
 			<li class="last"><div class="last"><a href="class-library.FB.html"><span>library\FB</span></a>
 			

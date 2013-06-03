@@ -7,7 +7,7 @@
 	<title>Class Core\Sessions</title>
 
 	<script type="text/javascript" src="resources/combined.js?699355046"></script>
-	<script type="text/javascript" src="elementlist.js?1127033442"></script>
+	<script type="text/javascript" src="elementlist.js?3525666960"></script>
 	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3505392360" />
 
 </head>
@@ -59,18 +59,14 @@
 				<li><a href="class-Core.GAbstract.html">GAbstract</a></li>
 				<li><a href="class-Core.GDbm.html">GDbm</a></li>
 				<li><a href="class-Core.MAbstract.html">MAbstract</a></li>
+				<li><a href="class-Core.MasterAbstract.html">MasterAbstract</a></li>
 				<li><a href="class-Core.MDbm.html">MDbm</a></li>
 				<li><a href="class-Core.Mobile.html">Mobile</a></li>
 				<li class="active"><a href="class-Core.Sessions.html">Sessions</a></li>
-				<li><a href="class-Core.SysUpgrade.html">SysUpgrade</a></li>
 				<li><a href="class-Core.Uri.html">Uri</a></li>
 			</ul>
 
 
-			<h3>Traits</h3>
-			<ul>
-				<li><a href="class-Core.MasterAbstract.html">MasterAbstract</a></li>
-			</ul>
 
 
 
@@ -119,21 +115,9 @@
 
 	<dl class="tree">
 		<dd style="padding-left:0px">
-			<a href="class-mysqli.html"><span>mysqli</span></a>
-			
-			
-			
-		</dd>
-		<dd style="padding-left:30px">
-			<img src="resources/inherit.png" alt="Extended by" />
-			<a href="class-Core.MDbm.html"><span>Core\MDbm</span></a>
-			
-			
-			
-		</dd>
-		<dd style="padding-left:60px">
-			<img src="resources/inherit.png" alt="Extended by" />
 <b><span>Core\Sessions</span></b>			
+			 implements 
+				<a href="class-SessionHandlerInterface.html"><span>SessionHandlerInterface</span></a>
 			
 			
 		</dd>
@@ -152,49 +136,14 @@
 		<b>Namespace:</b> <a href="namespace-Core.html">Core</a><br />
 		
 
-		<b>Located at</b> <a href="source-class-Core.Sessions.html#11-124" title="Go to source code">app/Core/Sessions.php</a><br />
+		<b>Located at</b> <a href="source-class-Core.Sessions.html#13-239" title="Go to source code">app/Core/Sessions.php</a><br />
 	</div>
 
 
 
 	<table class="summary" id="methods">
 	<caption>Methods summary</caption>
-	<tr data-order="__call" id="___call">
-
-		<td class="attributes"><code>
-			 public 
-			
-			
-			</code>
-		</td>
-
-		<td class="name"><div>
-		<a class="anchor" href="#___call">#</a>
-		<code><a href="source-class-Core.Sessions.html#22-28" title="Go to source code">__call</a>( <span>mixed <var>$name</var></span>, <span>mixed <var>$arguments</var></span> )</code>
-
-		<div class="description short">
-			
-<p>Singleton instance of Session.</p>
-
-		</div>
-
-		<div class="description detailed hidden">
-			
-<p>Singleton instance of Session.</p>
-
-
-
-
-
-
-
-				<h4>Overrides</h4>
-				<div class="list"><code><a href="class-Core.MDbm.html#___call">Core\MDbm::__call()</a></code></div>
-
-		</div>
-		</div></td>
-	</tr>
-	<tr data-order="instance" id="_instance">
+	<tr data-order="init" id="_init">
 
 		<td class="attributes"><code>
 			 public static
@@ -204,8 +153,8 @@
 		</td>
 
 		<td class="name"><div>
-		<a class="anchor" href="#_instance">#</a>
-		<code><a href="source-class-Core.Sessions.html#31-36" title="Go to source code">instance</a>( )</code>
+		<a class="anchor" href="#_init">#</a>
+		<code><a href="source-class-Core.Sessions.html#25-27" title="Go to source code">init</a>( <span>mixed <var>$type</var> = <span class="php-quote">&quot;memcached&quot;</span></span> )</code>
 
 		<div class="description short">
 			
@@ -216,6 +165,48 @@
 
 
 
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getInstance" id="_getInstance">
+
+		<td class="attributes"><code>
+			 public static
+			<code><a href="class-Core.Sessions.html">Core\Sessions</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getInstance">#</a>
+		<code><a href="source-class-Core.Sessions.html#33-46" title="Go to source code">getInstance</a>( <span>string <var>$type</var> = <span class="php-quote">&quot;memcached&quot;</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Fetch a singleton</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Fetch a singleton</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$type</var></dt>
+					<dd><code>string</code><br>$type</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Core.Sessions.html">Core\Sessions</a></code></code><br />
+				</div>
 
 
 
@@ -234,7 +225,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#___destruct">#</a>
-		<code><a href="source-class-Core.Sessions.html#38" title="Go to source code">__destruct</a>( )</code>
+		<code><a href="source-class-Core.Sessions.html#48" title="Go to source code">__destruct</a>( )</code>
 
 		<div class="description short">
 			
@@ -248,8 +239,43 @@
 
 
 
-				<h4>Overrides</h4>
-				<div class="list"><code><a href="class-Core.MDbm.html#___destruct">Core\MDbm::__destruct()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getSessionID" id="_getSessionID">
+
+		<td class="attributes"><code>
+			 public static
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getSessionID">#</a>
+		<code><a href="source-class-Core.Sessions.html#50-56" title="Go to source code">getSessionID</a>( )</code>
+
+		<div class="description short">
+			
+<p>Fetch current session ID</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Fetch current session ID</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
 
 		</div>
 		</div></td>
@@ -265,7 +291,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#___construct">#</a>
-		<code><a href="source-class-Core.Sessions.html#40-58" title="Go to source code">__construct</a>( )</code>
+		<code><a href="source-class-Core.Sessions.html#59-85" title="Go to source code">__construct</a>( <span>mixed <var>$type</var></span> )</code>
 
 		<div class="description short">
 			
@@ -279,13 +305,130 @@
 
 
 
-				<h4>Overrides</h4>
-				<div class="list"><code><a href="class-Core.MDbm.html#___construct">Core\MDbm::__construct()</a></code></div>
 
 		</div>
 		</div></td>
 	</tr>
-	<tr data-order="_session_destroy" id="__session_destroy">
+	<tr data-order="validateSessionID" id="_validateSessionID">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_validateSessionID">#</a>
+		<code><a href="source-class-Core.Sessions.html#87-89" title="Go to source code">validateSessionID</a>( <span>mixed <var>$id</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="destroy" id="_destroy">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_destroy">#</a>
+		<code><a href="source-class-Core.Sessions.html#91-109" title="Go to source code">destroy</a>( <span>string <var>$sessionID</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Destroy current session</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Destroy current session</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$sessionID</var></dt>
+					<dd><code>string</code><br>$sessionID</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br />
+				</div>
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-SessionHandlerInterface.html#_destroy">SessionHandlerInterface::destroy()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="open" id="_open">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_open">#</a>
+		<code><a href="source-class-Core.Sessions.html#111-122" title="Go to source code">open</a>( <span>string <var>$save_path</var></span>, <span>string <var>$name</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Initiate session</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Initiate session</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$save_path</var></dt>
+					<dd><code>string</code><br>$save_path</dd>
+					<dt><var>$name</var></dt>
+					<dd><code>string</code><br>$name</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br />
+				</div>
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-SessionHandlerInterface.html#_open">SessionHandlerInterface::open()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="close" id="_close">
 
 		<td class="attributes"><code>
 			 public 
@@ -295,8 +438,8 @@
 		</td>
 
 		<td class="name"><div>
-		<a class="anchor" href="#__session_destroy">#</a>
-		<code><a href="source-class-Core.Sessions.html#60-63" title="Go to source code">_session_destroy</a>( <span>mixed <var>$id</var></span> )</code>
+		<a class="anchor" href="#_close">#</a>
+		<code><a href="source-class-Core.Sessions.html#124-129" title="Go to source code">close</a>( )</code>
 
 		<div class="description short">
 			
@@ -311,126 +454,102 @@
 
 
 
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-SessionHandlerInterface.html#_close">SessionHandlerInterface::close()</a></code></div>
 		</div>
 		</div></td>
 	</tr>
-	<tr data-order="_session_open" id="__session_open">
+	<tr data-order="write" id="_write">
 
 		<td class="attributes"><code>
 			 public 
-			
+			boolean
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
-		<a class="anchor" href="#__session_open">#</a>
-		<code><a href="source-class-Core.Sessions.html#65" title="Go to source code">_session_open</a>( )</code>
+		<a class="anchor" href="#_write">#</a>
+		<code><a href="source-class-Core.Sessions.html#130-163" title="Go to source code">write</a>( <span>string <var>$sessionID</var></span>, <span>string <var>$data</var></span> )</code>
 
 		<div class="description short">
 			
+<p>Write session to db/file</p>
+
 		</div>
 
 		<div class="description detailed hidden">
 			
+<p>Write session to db/file</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$sessionID</var></dt>
+					<dd><code>string</code><br>$sessionID</dd>
+					<dt><var>$data</var></dt>
+					<dd><code>string</code><br>$data</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br />
+				</div>
 
 
 
 
-
-
-
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-SessionHandlerInterface.html#_write">SessionHandlerInterface::write()</a></code></div>
 		</div>
 		</div></td>
 	</tr>
-	<tr data-order="_session_close" id="__session_close">
+	<tr data-order="read" id="_read">
 
 		<td class="attributes"><code>
 			 public 
-			
+			boolean
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
-		<a class="anchor" href="#__session_close">#</a>
-		<code><a href="source-class-Core.Sessions.html#66" title="Go to source code">_session_close</a>( )</code>
+		<a class="anchor" href="#_read">#</a>
+		<code><a href="source-class-Core.Sessions.html#165-189" title="Go to source code">read</a>( <span>string <var>$sessionID</var></span> )</code>
 
 		<div class="description short">
 			
+<p>Read session from db/file</p>
+
 		</div>
 
 		<div class="description detailed hidden">
 			
+<p>Read session from db/file</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$sessionID</var></dt>
+					<dd><code>string</code><br>$sessionID</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br />
+				</div>
 
 
 
 
-
-
-
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-SessionHandlerInterface.html#_read">SessionHandlerInterface::read()</a></code></div>
 		</div>
 		</div></td>
 	</tr>
-	<tr data-order="_session_write" id="__session_write">
-
-		<td class="attributes"><code>
-			 public 
-			
-			
-			</code>
-		</td>
-
-		<td class="name"><div>
-		<a class="anchor" href="#__session_write">#</a>
-		<code><a href="source-class-Core.Sessions.html#68-81" title="Go to source code">_session_write</a>( <span>mixed <var>$id</var></span>, <span>mixed <var>$data</var></span> )</code>
-
-		<div class="description short">
-			
-		</div>
-
-		<div class="description detailed hidden">
-			
-
-
-
-
-
-
-
-		</div>
-		</div></td>
-	</tr>
-	<tr data-order="_session_read" id="__session_read">
-
-		<td class="attributes"><code>
-			 public 
-			
-			
-			</code>
-		</td>
-
-		<td class="name"><div>
-		<a class="anchor" href="#__session_read">#</a>
-		<code><a href="source-class-Core.Sessions.html#84-92" title="Go to source code">_session_read</a>( <span>mixed <var>$id</var></span> )</code>
-
-		<div class="description short">
-			
-		</div>
-
-		<div class="description detailed hidden">
-			
-
-
-
-
-
-
-
-		</div>
-		</div></td>
-	</tr>
-	<tr data-order="_session_gc" id="__session_gc">
+	<tr data-order="gc" id="_gc">
 
 		<td class="attributes"><code>
 			 public 
@@ -440,8 +559,8 @@
 		</td>
 
 		<td class="name"><div>
-		<a class="anchor" href="#__session_gc">#</a>
-		<code><a href="source-class-Core.Sessions.html#94-103" title="Go to source code">_session_gc</a>( <span>integer <var>$max</var></span> )</code>
+		<a class="anchor" href="#_gc">#</a>
+		<code><a href="source-class-Core.Sessions.html#191-207" title="Go to source code">gc</a>( <span>integer <var>$max</var></span> )</code>
 
 		<div class="description short">
 			
@@ -469,6 +588,8 @@
 
 
 
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-SessionHandlerInterface.html#_gc">SessionHandlerInterface::gc()</a></code></div>
 		</div>
 		</div></td>
 	</tr>
@@ -483,7 +604,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_DeleteSession">#</a>
-		<code><a href="source-class-Core.Sessions.html#105-112" title="Go to source code">DeleteSession</a>( )</code>
+		<code><a href="source-class-Core.Sessions.html#209-216" title="Go to source code">DeleteSession</a>( )</code>
 
 		<div class="description short">
 			
@@ -516,7 +637,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getCurrentUser">#</a>
-		<code><a href="source-class-Core.Sessions.html#114-122" title="Go to source code">getCurrentUser</a>( )</code>
+		<code><a href="source-class-Core.Sessions.html#218-226" title="Go to source code">getCurrentUser</a>( )</code>
 
 		<div class="description short">
 			
@@ -542,67 +663,95 @@
 		</div>
 		</div></td>
 	</tr>
+	<tr data-order="__put" id="___put">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___put">#</a>
+		<code><a href="source-class-Core.Sessions.html#228-230" title="Go to source code">__put</a>( <span>mixed <var>$key</var></span>, <span>mixed <var>$val</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="__get" id="___get">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___get">#</a>
+		<code><a href="source-class-Core.Sessions.html#232-234" title="Go to source code">__get</a>( <span>mixed <var>$var</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="add" id="_add">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_add">#</a>
+		<code><a href="source-class-Core.Sessions.html#236-238" title="Go to source code">add</a>( <span>mixed <var>$key</var></span>, <span>mixed <var>$val</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
 	</table>
 
-	<table class="summary inherited">
-	<caption>Methods inherited from <a href="class-Core.MDbm.html#methods">Core\MDbm</a></caption>
-	<tr>
-		<td><code>
-			<a href="class-Core.MDbm.html#_affected">affected()</a>, 
-			<a href="class-Core.MDbm.html#_changedb">changedb()</a>, 
-			<a href="class-Core.MDbm.html#_getAll">getAll()</a>, 
-			<a href="class-Core.MDbm.html#_getRow">getRow()</a>, 
-			<a href="class-Core.MDbm.html#_lastid">lastid()</a>, 
-			<a href="class-Core.MDbm.html#_query">query()</a>
-		</code></td>
-	</tr>
-	</table>
-	<table class="summary inherited">
-	<caption>Methods inherited from <a href="class-mysqli.html#methods">mysqli</a></caption>
-	<tr>
-		<td><code>
-			<a href="class-mysqli.html#_autocommit">autocommit()</a>, 
-			<a href="class-mysqli.html#_change_user">change_user()</a>, 
-			<a href="class-mysqli.html#_character_set_name">character_set_name()</a>, 
-			<a href="class-mysqli.html#_close">close()</a>, 
-			<a href="class-mysqli.html#_commit">commit()</a>, 
-			<a href="class-mysqli.html#_connect">connect()</a>, 
-			<a href="class-mysqli.html#_debug">debug()</a>, 
-			<a href="class-mysqli.html#_dump_debug_info">dump_debug_info()</a>, 
-			<a href="class-mysqli.html#_escape_string">escape_string()</a>, 
-			<a href="class-mysqli.html#_get_charset">get_charset()</a>, 
-			<a href="class-mysqli.html#_get_client_info">get_client_info()</a>, 
-			<a href="class-mysqli.html#_get_connection_stats">get_connection_stats()</a>, 
-			<a href="class-mysqli.html#_get_server_info">get_server_info()</a>, 
-			<a href="class-mysqli.html#_get_warnings">get_warnings()</a>, 
-			<a href="class-mysqli.html#_init">init()</a>, 
-			<a href="class-mysqli.html#_kill">kill()</a>, 
-			<a href="class-mysqli.html#_more_results">more_results()</a>, 
-			<a href="class-mysqli.html#_multi_query">multi_query()</a>, 
-			<a href="class-mysqli.html#_mysqli">mysqli()</a>, 
-			<a href="class-mysqli.html#_next_result">next_result()</a>, 
-			<a href="class-mysqli.html#_options">options()</a>, 
-			<a href="class-mysqli.html#_ping">ping()</a>, 
-			<a href="class-mysqli.html#_poll">poll()</a>, 
-			<a href="class-mysqli.html#_prepare">prepare()</a>, 
-			<a href="class-mysqli.html#_real_connect">real_connect()</a>, 
-			<a href="class-mysqli.html#_real_escape_string">real_escape_string()</a>, 
-			<a href="class-mysqli.html#_real_query">real_query()</a>, 
-			<a href="class-mysqli.html#_reap_async_query">reap_async_query()</a>, 
-			<a href="class-mysqli.html#_refresh">refresh()</a>, 
-			<a href="class-mysqli.html#_rollback">rollback()</a>, 
-			<a href="class-mysqli.html#_select_db">select_db()</a>, 
-			<a href="class-mysqli.html#_set_charset">set_charset()</a>, 
-			<a href="class-mysqli.html#_set_opt">set_opt()</a>, 
-			<a href="class-mysqli.html#_ssl_set">ssl_set()</a>, 
-			<a href="class-mysqli.html#_stat">stat()</a>, 
-			<a href="class-mysqli.html#_stmt_init">stmt_init()</a>, 
-			<a href="class-mysqli.html#_store_result">store_result()</a>, 
-			<a href="class-mysqli.html#_thread_safe">thread_safe()</a>, 
-			<a href="class-mysqli.html#_use_result">use_result()</a>
-		</code></td>
-	</tr>
-	</table>
 
 
 
@@ -616,18 +765,41 @@
 
 	<table class="summary" id="properties">
 	<caption>Properties summary</caption>
-	<tr data-order="protect" id="$protect">
+	<tr data-order="dbm" id="$dbm">
 		<td class="attributes"><code>
 			protected static 
-			array
+			mixed
 		</code></td>
 
 		<td class="name">
-				<a href="source-class-Core.Sessions.html#17" title="Go to source code"><var>$protect</var></a>
+				<a href="source-class-Core.Sessions.html#17" title="Go to source code"><var>$dbm</var></a>
 		</td>
-		<td class="value"><code><span class="php-keyword1">array</span>(<span class="php-quote">'_timeout'</span>,<span class="php-quote">'sid'</span>,<span class="php-quote">'username'</span>,<span class="php-quote">'session_name'</span>,<span class="php-quote">'organization_id'</span>,<span class="php-quote">'mod_time'</span>,<span class="php-quote">'sessiondata'</span>,<span class="php-quote">'expires'</span>,<span class="php-quote">'ipaddr'</span>)</code></td>
+		<td class="value"><code></code></td>
 		<td class="description"><div>
-			<a href="#$protect" class="anchor">#</a>
+			<a href="#$dbm" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="type" id="$type">
+		<td class="attributes"><code>
+			protected  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Core.Sessions.html#18" title="Go to source code"><var>$type</var></a>
+		</td>
+		<td class="value"><code><span class="php-quote">&quot;memcached&quot;</span></code></td>
+		<td class="description"><div>
+			<a href="#$type" class="anchor">#</a>
 
 			<div class="description short">
 				
@@ -685,46 +857,54 @@
 			</div>
 		</div></td>
 	</tr>
+	<tr data-order="memcache" id="$memcache">
+		<td class="attributes"><code>
+			protected  
+			mixed
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Core.Sessions.html#21" title="Go to source code"><var>$memcache</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$memcache" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="settings" id="$settings">
+		<td class="attributes"><code>
+			protected  
+			mixed
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Core.Sessions.html#22" title="Go to source code"><var>$settings</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$settings" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
 	</table>
 
-	<table class="summary inherited">
-	<caption>Properties inherited from <a href="class-Core.MDbm.html#properties">Core\MDbm</a></caption>
-	<tr>
-		<td><code>
-			<a href="class-Core.MDbm.html#$_mysql_errcode"><var>$_mysql_errcode</var></a>, 
-			<a href="class-Core.MDbm.html#$_mysql_errmsg"><var>$_mysql_errmsg</var></a>, 
-			<a href="class-Core.MDbm.html#$conn"><var>$conn</var></a>, 
-			<a href="class-Core.MDbm.html#$mysqli_flags"><var>$mysqli_flags</var></a>, 
-			<a href="class-Core.MDbm.html#$mysqli_types"><var>$mysqli_types</var></a>
-		</code></td>
-	</tr>
-	</table>
-	<table class="summary inherited">
-	<caption>Properties inherited from <a href="class-mysqli.html#properties">mysqli</a></caption>
-	<tr>
-		<td><code>
-			<a href="class-mysqli.html#$affected_rows"><var>$affected_rows</var></a>, 
-			<a href="class-mysqli.html#$client_info"><var>$client_info</var></a>, 
-			<a href="class-mysqli.html#$client_version"><var>$client_version</var></a>, 
-			<a href="class-mysqli.html#$connect_errno"><var>$connect_errno</var></a>, 
-			<a href="class-mysqli.html#$connect_error"><var>$connect_error</var></a>, 
-			<a href="class-mysqli.html#$errno"><var>$errno</var></a>, 
-			<a href="class-mysqli.html#$error"><var>$error</var></a>, 
-			<a href="class-mysqli.html#$error_list"><var>$error_list</var></a>, 
-			<a href="class-mysqli.html#$field_count"><var>$field_count</var></a>, 
-			<a href="class-mysqli.html#$host_info"><var>$host_info</var></a>, 
-			<a href="class-mysqli.html#$info"><var>$info</var></a>, 
-			<a href="class-mysqli.html#$insert_id"><var>$insert_id</var></a>, 
-			<a href="class-mysqli.html#$protocol_version"><var>$protocol_version</var></a>, 
-			<a href="class-mysqli.html#$server_info"><var>$server_info</var></a>, 
-			<a href="class-mysqli.html#$server_version"><var>$server_version</var></a>, 
-			<a href="class-mysqli.html#$sqlstate"><var>$sqlstate</var></a>, 
-			<a href="class-mysqli.html#$stat"><var>$stat</var></a>, 
-			<a href="class-mysqli.html#$thread_id"><var>$thread_id</var></a>, 
-			<a href="class-mysqli.html#$warning_count"><var>$warning_count</var></a>
-		</code></td>
-	</tr>
-	</table>
 
 
 

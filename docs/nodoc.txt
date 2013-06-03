@@ -63,37 +63,40 @@
 		<error severity="error" line="2" message="Missing documentation of interface Core_Interface" source="ApiGen.Documentation.Documentation"/>
 	</file>
 	<file name="/home/firewall/www/ProfferFramework/app/Core/MAbstract.php">
-		<error severity="error" line="16" message="Missing documentation of class Core\MAbstract" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="23" message="Missing documentation of method Core\MAbstract::__construct()" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="27" message="Missing documentation of method Core\MAbstract::__destruct()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="17" message="Missing documentation of class Core\MAbstract" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="24" message="Missing documentation of method Core\MAbstract::__construct()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="28" message="Missing documentation of method Core\MAbstract::__destruct()" source="ApiGen.Documentation.Documentation"/>
 	</file>
 	<file name="/home/firewall/www/ProfferFramework/app/Core/MasterAbstract.php">
-		<error severity="error" line="14" message="Missing documentation of trait Core\MasterAbstract" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="21" message="Missing documentation of property Core\MasterAbstract::$jsLibraries" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="23" message="Missing documentation of property Core\MasterAbstract::$_vars" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="25" message="Missing documentation of property Core\MasterAbstract::$protected" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="27" message="Missing documentation of property Core\MasterAbstract::$config" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="51" message="Missing documentation of throwing an exception of method Core\MasterAbstract::__destruct()" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="158" message="Missing documentation of method Core\MasterAbstract::__construct()" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="340" message="Missing documentation of method Core\MasterAbstract::__get()" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="344" message="Missing documentation of method Core\MasterAbstract::__set()" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="348" message="Missing documentation of method Core\MasterAbstract::toArray()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="15" message="Missing documentation of class Core\MasterAbstract" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="23" message="Missing documentation of property Core\MasterAbstract::$jsLibraries" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="25" message="Missing documentation of property Core\MasterAbstract::$_vars" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="26" message="Missing documentation of property Core\MasterAbstract::$dbm" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="28" message="Missing documentation of property Core\MasterAbstract::$protected" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="30" message="Missing documentation of property Core\MasterAbstract::$config" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="54" message="Missing documentation of throwing an exception of method Core\MasterAbstract::__destruct()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="163" message="Missing documentation of method Core\MasterAbstract::__wakeup()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="169" message="Missing documentation of method Core\MasterAbstract::__construct()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="358" message="Missing documentation of method Core\MasterAbstract::__get()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="362" message="Missing documentation of method Core\MasterAbstract::__set()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="366" message="Missing documentation of method Core\MasterAbstract::toArray()" source="ApiGen.Documentation.Documentation"/>
 	</file>
 	<file name="/home/firewall/www/ProfferFramework/app/Core/MDbm.php">
 		<error severity="error" line="14" message="Missing documentation of class Core\MDbm" source="ApiGen.Documentation.Documentation"/>
 		<error severity="error" line="16" message="Missing documentation of property Core\MDbm::$_mysql_errmsg" source="ApiGen.Documentation.Documentation"/>
 		<error severity="error" line="17" message="Missing documentation of property Core\MDbm::$_mysql_errcode" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="19" message="Missing documentation of property Core\MDbm::$conn" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="81" message="Missing documentation of method Core\MDbm::__construct()" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="95" message="Missing documentation of method Core\MDbm::__destruct()" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="97" message="Missing documentation of method Core\MDbm::__call()" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="102" message="Missing documentation of method Core\MDbm::query()" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="114" message="Missing documentation of return value of method Core\MDbm::getRow()" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="114" message="Missing documentation of parameter Core\MDbm::getRow($sql)" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="119" message="Missing documentation of method Core\MDbm::affected()" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="120" message="Missing documentation of method Core\MDbm::getAll()" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="149" message="Missing documentation of method Core\MDbm::lastid()" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="152" message="Missing documentation of method Core\MDbm::changedb()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="20" message="Missing documentation of property Core\MDbm::$conn" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="22" message="Missing documentation of method Core\MDbm::getInstance()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="29" message="Missing documentation of method Core\MDbm::__construct()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="43" message="Missing documentation of method Core\MDbm::__destruct()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="45" message="Missing documentation of method Core\MDbm::__call()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="50" message="Missing documentation of method Core\MDbm::query()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="64" message="Missing documentation of return value of method Core\MDbm::getRow()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="64" message="Missing documentation of parameter Core\MDbm::getRow($sql)" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="69" message="Missing documentation of method Core\MDbm::affected()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="70" message="Missing documentation of method Core\MDbm::getAll()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="99" message="Missing documentation of method Core\MDbm::lastid()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="102" message="Missing documentation of method Core\MDbm::changedb()" source="ApiGen.Documentation.Documentation"/>
 	</file>
 	<file name="/home/firewall/www/ProfferFramework/app/Core/Mobile.php">
 		<error severity="error" line="10" message="Missing documentation of class Core\Mobile" source="ApiGen.Documentation.Documentation"/>
@@ -102,32 +105,28 @@
 		<error severity="error" line="24" message="Missing documentation of method Core\Mobile::__construct()" source="ApiGen.Documentation.Documentation"/>
 	</file>
 	<file name="/home/firewall/www/ProfferFramework/app/Core/Sessions.php">
-		<error severity="error" line="11" message="Missing documentation of class Core\Sessions" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="17" message="Missing documentation of property Core\Sessions::$protect" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="13" message="Missing documentation of class Core\Sessions" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="17" message="Missing documentation of property Core\Sessions::$dbm" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="18" message="Missing documentation of property Core\Sessions::$type" source="ApiGen.Documentation.Documentation"/>
 		<error severity="error" line="19" message="Missing documentation of property Core\Sessions::$_sessionid" source="ApiGen.Documentation.Documentation"/>
 		<error severity="error" line="20" message="Missing documentation of property Core\Sessions::$_session_name" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="22" message="Missing documentation of parameter Core\Sessions::__call($arguments)" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="22" message="Missing documentation of parameter Core\Sessions::__call($name)" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="31" message="Missing documentation of method Core\Sessions::instance()" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="38" message="Missing documentation of method Core\Sessions::__destruct()" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="40" message="Missing documentation of method Core\Sessions::__construct()" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="60" message="Missing documentation of method Core\Sessions::_session_destroy()" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="65" message="Missing documentation of method Core\Sessions::_session_open()" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="66" message="Missing documentation of method Core\Sessions::_session_close()" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="68" message="Missing documentation of method Core\Sessions::_session_write()" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="84" message="Missing documentation of method Core\Sessions::_session_read()" source="ApiGen.Documentation.Documentation"/>
-	</file>
-	<file name="/home/firewall/www/ProfferFramework/app/Core/SysUpgrade.php">
-		<error severity="error" line="11" message="Missing documentation of class Core\SysUpgrade" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="13" message="Missing documentation of property Core\SysUpgrade::$status" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="17" message="Missing documentation of method Core\SysUpgrade::__construct()" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="22" message="Missing documentation of method Core\SysUpgrade::check()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="21" message="Missing documentation of property Core\Sessions::$memcache" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="22" message="Missing documentation of property Core\Sessions::$settings" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="25" message="Missing documentation of method Core\Sessions::init()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="48" message="Missing documentation of method Core\Sessions::__destruct()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="59" message="Missing documentation of method Core\Sessions::__construct()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="87" message="Missing documentation of method Core\Sessions::validateSessionID()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="124" message="Missing documentation of method Core\Sessions::close()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="warning" line="191" message="Existing documentation &quot;num_rows&quot; of nonexistent return value of method Core\Sessions::gc()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="228" message="Missing documentation of method Core\Sessions::__put()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="232" message="Missing documentation of method Core\Sessions::__get()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="236" message="Missing documentation of method Core\Sessions::add()" source="ApiGen.Documentation.Documentation"/>
 	</file>
 	<file name="/home/firewall/www/ProfferFramework/app/Core/Uri.php">
 		<error severity="error" line="11" message="Missing documentation of class Core\Uri" source="ApiGen.Documentation.Documentation"/>
 		<error severity="error" line="12" message="Missing documentation of method Core\Uri::__construct()" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="64" message="Missing documentation of method Core\Uri::__get()" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="69" message="Missing documentation of method Core\Uri::toArray()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="71" message="Missing documentation of method Core\Uri::__get()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="76" message="Missing documentation of method Core\Uri::toArray()" source="ApiGen.Documentation.Documentation"/>
 	</file>
 	<file name="/home/firewall/www/ProfferFramework/app/error_pages/.cache/4e0ab1d7adcb0845066afb15acfe9c59d5387b4e._ER_TEMPLATE_NOT_FOUND.tpl.php">
 		<error severity="error" line="25" message="Missing documentation of function content_51473430d520a()" source="ApiGen.Documentation.Documentation"/>
@@ -151,15 +150,15 @@
 		<error severity="warning" line="141" message="Existing documentation &quot;mixed $object&quot; of nonexistent parameter of method library\FB::send()" source="ApiGen.Documentation.Documentation"/>
 	</file>
 	<file name="/home/firewall/www/ProfferFramework/app/library/Growl.php">
-		<error severity="error" line="8" message="Missing documentation of constant library_Growl::GROWL_PRIORITY_LOW" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="9" message="Missing documentation of constant library_Growl::GROWL_PRIORITY_MODERATE" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="10" message="Missing documentation of constant library_Growl::GROWL_PRIORITY_NORMAL" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="11" message="Missing documentation of constant library_Growl::GROWL_PRIORITY_HIGH" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="12" message="Missing documentation of constant library_Growl::GROWL_PRIORITY_EMERGENCY" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="20" message="Missing documentation of method library_Growl::__construct()" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="29" message="Missing documentation of method library_Growl::addNotification()" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="34" message="Missing documentation of method library_Growl::register()" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="57" message="Missing documentation of method library_Growl::notify()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="9" message="Missing documentation of constant library\Growl::GROWL_PRIORITY_LOW" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="10" message="Missing documentation of constant library\Growl::GROWL_PRIORITY_MODERATE" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="11" message="Missing documentation of constant library\Growl::GROWL_PRIORITY_NORMAL" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="12" message="Missing documentation of constant library\Growl::GROWL_PRIORITY_HIGH" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="13" message="Missing documentation of constant library\Growl::GROWL_PRIORITY_EMERGENCY" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="21" message="Missing documentation of method library\Growl::__construct()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="30" message="Missing documentation of method library\Growl::addNotification()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="35" message="Missing documentation of method library\Growl::register()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="58" message="Missing documentation of method library\Growl::notify()" source="ApiGen.Documentation.Documentation"/>
 	</file>
 	<file name="/home/firewall/www/ProfferFramework/app/library/i18n.php">
 		<error severity="error" line="28" message="Missing documentation of class library\i18n" source="ApiGen.Documentation.Documentation"/>
