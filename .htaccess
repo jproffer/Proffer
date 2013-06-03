@@ -1,0 +1,55 @@
+IndexIgnore *.gif *.jpg *.png *.php *.doc *.pdf
+
+<IfModule rewrite_module>
+	
+	RewriteEngine On
+######### maintenance screen #####################
+RewriteCond %{DOCUMENT_ROOT}/maintenance.html -f
+RewriteRule ^.*$ maintenance.html [L]
+##################################################
+
+######### prevent direct linking of images/files ##############
+#RewriteCond %{HTTP_REFERER} !^$
+#RewriteCond %{HTTP_REFERER} !^http://(www\.)?%{HTTP_HOST}/.*$ [NC]
+#RewriteCond %{HTTP_HOST} !^http://tutorary.com/.*$ [NC]
+#RewriteRule \.(gif|jpg|js|css|png|avi|wav|mov|doc|flv)$ - [F]
+###############################################################
+
+	RewriteCond %{REQUEST_FILENAME} .*\.tpl$
+	RewriteRule ^(.*)$ /index.php/$1 [QSA,L]
+
+	# we dont want to try to process media!
+	RewriteCond %{REQUEST_FILENAME} !.gif|jpg|js|css|png|avi|wav|mov|doc|flv$ 
+
+	RewriteCond %{REQUEST_FILENAME} !-d
+	RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteRule ^(.*)$ index.php/$1 [QSA,L]
+</IfModule>
+
+############# save bandwidth, use gzip (mod_deflate) if available!
+<ifmodule mod_deflate.c>
+	AddOutputFilterByType DEFLATE text/text text/html text/plain text/xml text/css application/x-javascript application/javascript text/javascript
+</ifmodule>
+
+
+<ifmodule mod_headers.c>
+  # Cache specified files for 6 days
+  <filesmatch "\.(ico|flv|jpg|jpeg|png|gif|css|swf|js)$">
+	Header set Cache-Control "max-age=518400, public"
+  </filesmatch>
+  # Cache HTML files for a couple hours
+  <filesmatch "\.(html|htm)$">
+	Header set Cache-Control "max-age=7200, private, must-revalidate"
+  </filesmatch>
+  # Cache PDFs for a day
+  <filesmatch "\.(pdf)$">
+	Header set Cache-Control "max-age=86400, public"
+  </filesmatch>
+  # Cache Javascript
+  <filesmatch "\.(js)$">
+	# 2.5 days
+	Header set Cache-Control "max-age=216000, private"
+	# 6 days
+	#Header set Cache-Control "max-age=518400, private"
+  </filesmatch>
+</ifmodule>

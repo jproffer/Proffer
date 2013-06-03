@@ -9,10 +9,6 @@
 	if (DEBUG_ROUTES) {
 		\library\FB::log("Class: {$uri->controller}->{$uri->function}A");
 	}
-	if (DEVELOPMENT) {
-	 	$ug = new \Core\SysUpgrade();
-	 	$ug->check();
-	}
 	$obj = new $uri->controller($uri);
 	$obj->{$uri->function."A"}();
 	\library\benchmark::stop(1);
