@@ -42,6 +42,13 @@
 			}
 		}
 		
+		/**
+		 * 
+		 * @param mongocollection $collection
+		 * @param string $qry
+		 * @param string $type
+		 * @return boolean
+		 */
 		public function query($collection, $qry, $type="find") {
 			$this->checkconn();
 			$coll = $this->db->$collection->find();
@@ -75,7 +82,6 @@
 						FB::log("Collection: $collection");
 						FB::log($qry);
 						FB::log($this->db->lastError());
-				//		return false;
 					}
 				}
 

@@ -1,32 +1,28 @@
-scite<?php
-	namespace Controller;
-	
-	class Main extends \Core\MAbstract implements \Interfaces\iAbstract {
+<?php
+
+namespace Controller;
+
+	class Main extends \Core\CAbstract implements \Interfaces\iAbstract {
 		
-		protected $config = array(
-			"include_css"	=>true,
-			"include_js"	=>true,
-			"execute"		=>true
-		);
-		
-		/**
-		 * Default app entry point
-		 */
-		public function indexA() {
-			// our page uses 'Colorbox' and 'Migrate' jquery plugins
-			$this->addLibrary("colorbox,migrate"); 
-		
-			// Give me something to do!
+		// define what libraries we use
+		public static $jsLibraries = array();
+		public function gslib($arr) {
+			parent::$jsLibraries = $arr;
 		}
 		
-		public function NoRenderFunctionA() {
-			// this is an ajax call, for example, and we only want to return JSON.
-			// so tell our abstract class not to execute a template
-			$this->noexec();
-			header("content-type: text/json");
-			
-			$data = ["w00t"];
-			echo json_encode($data);
+		public function indexA() {
+			$this->addLibrary("slider");
+			$this->currentDate = date("c");
+			$this->keyWords = "";
+		}
+
+		public function __call($name, $arguments) {
+			global $TRACE;
+			$TRACE[]=__CLASS__."::$name($arguments) - ".get_called_class();
+		}
+		public function testA() {
+			$this->addLibrary("cycle,easing,nivo");
+
 		}
 	}
 ?>

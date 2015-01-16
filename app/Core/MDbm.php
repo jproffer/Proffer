@@ -55,8 +55,6 @@
 		 if ($result==false||!empty($this->error)) {
 			$this->_mysql_errcode=mysqli_errno($this);
 			$this->_mysql_errmsg=mysqli_error($this);
-			echo "error: {$this->error}";exit;
-			echo "error: {$this->_mysql_error}";
 			$this->PrintError();
 		 }
 			return $result;

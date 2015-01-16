@@ -1,8 +1,8 @@
 <?php
 
-	namespace Core\Exceptions;
+namespace Core\Exceptions;
 
-	class InterfaceException extends \Exception {
+	class InterfaceException extends Exception {
 		public function __construct($message, $code = 0, Exception $previous = null) {
 			parent::__construct($message, $code, $previous);
 		}

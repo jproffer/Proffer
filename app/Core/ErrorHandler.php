@@ -1,27 +1,17 @@
 <?php
-/**
-	* Error handler.
-	* @author Johnathan Proffer
-	* @Copyright (c) Johnathan Proffer
-	* @license http://www.gnu.org/licenses/gpl-3.0.html GNU General Public Licence 
-	* @todo: This kind of sucks.  Redo! 
- */
-namespace Core;
-	use library\FB;
-	
 	class ErrorHandler {
 
-		private $UseFireBug	= true;
+		private $UseFireBug 			= false;
 		
 		private $config = array(
-			"args"	=> false,
-			"_ENV"	=> false,
-			"_GET"		=> false,
-			"_POST"	=> false,
-			"_FILES"	=> false,
-			"_SERVER"	=> false,
-			"_COOKIE"	=> false,
-			"_REQUEST"	=> false,
+			"args"				=> false,
+			"_ENV"				=> false,
+			"_GET" 				=> false,
+			"_POST" 			=> false,
+			"_FILES" 			=> false,
+			"_SERVER" 			=> false,
+			"_COOKIE" 			=> false,
+			"_REQUEST" 			=> false,
 			"HTTP_GET_VARS" 	=> false,
 			"HTTP_ENV_VARS" 	=> false,
 			"HTTP_POST_VARS"	=> false,
@@ -34,32 +24,32 @@ namespace Core;
 		
 		private $codes = array(
 			"error" => array(
-	'color'	=> "#FFDFDF",
-	'border' => "#880000",
-	1			=> "E_ERROR",
-	4			=> "E_PARSE",
-	16		=> "E_CORE_ERROR",
-	64		=> "E_COMPILE_ERROR",
-	256		=> "E_USER_ERROR",
-	2048 	=> "E_STRICT",
-	30719	=> "E_ALL"
+				'color'	=> "#FFDFDF",
+				'border' => "#880000",
+				1			=> "E_ERROR",
+				4			=> "E_PARSE",
+				16		=> "E_CORE_ERROR",
+				64		=> "E_COMPILE_ERROR",
+				256		=> "E_USER_ERROR",
+				2048 	=> "E_STRICT",
+				30719	=> "E_ALL"
 			),
 			"notice" => array(
-	'color'	=> "#BEFFAD",
-	'border' => "#5EEB3B",
-	8			=> "E_NOTICE",
-	1024	=> "E_USER_NOTICE"
+				'color'	=> "#BEFFAD",
+				'border' => "#5EEB3B",
+				8			=> "E_NOTICE",
+				1024	=> "E_USER_NOTICE"
 			),
 			"warning" => array(
-	'color'	=> "#B8BEFF",
-	'border' => "#6B77FA",
-	2	=> "E_WARNING",
-	32 		=> "E_CORE_WARNING",
-	128		=> "E_COMPILE_WARNING",
-	512		=> "E_USER_WARNING",
-	4096	=> "E_RECOVERABLE_ERROR",
-	8192 	=> "E_DEPRECATED",
-	16384 	=> "E_USER_DEPRECATED",
+				'color'	=> "#B8BEFF",
+				'border' => "#6B77FA",
+				2 			=> "E_WARNING",
+				32 		=> "E_CORE_WARNING",
+				128		=> "E_COMPILE_WARNING",
+				512		=> "E_USER_WARNING",
+				4096	=> "E_RECOVERABLE_ERROR",
+				8192 	=> "E_DEPRECATED",
+				16384 	=> "E_USER_DEPRECATED",
 			)
 		);
 		private $trace = array();
@@ -71,28 +61,27 @@ namespace Core;
 		}
 		public function __destruct() {
 			if (count($this->trace)>0) {
-	if (!$this->UseFireBug) { echo "<div style='overflow: hidden; display: block; clear: both;'>"; }
-		foreach ($this->trace as $trace) {
-			
-			if ($this->UseFireBug) {  FB::error($trace,$trace['etype']); }
-			else {
-				echo "
-		<div style='font-weight: normal; font-size: 12px; font-family: serif; padding: 2px; margin-top: 4px; background-color: {$trace['a']}; border: solid {$trace['b']} 1px; overflow: hidden;'>
-			<B>{$trace['etype']}: {$trace['msg']}</b><br />
-			<table cellpadding='2' cellspacing='0' border='1' style='width: 100%; border: solid #DFDFDF 1px; border-width: 1px; border-collapse: collapse; background-color: #FFEFEF; font-weight: normal; font-size: 12px; font-family: serif;'>".implode(" ",$trace['path'])."</table>
-				";
-				if (count($trace['stack'])>0) {
-		echo "
-				<div style='background-color: #EFEFEF;'>
-					<pre>".print_r($trace['stack'],true)."</pre>
-				</div>
-			</div>
-		";
-				}
-				echo "</div>";
-			}
-		}
-		if (!$this->UseFireBug) { echo "</div>"; }
+				if (!$this->UseFireBug) { echo "<div style='overflow: hidden; display: block; clear: both;'>"; }
+					foreach ($this->trace as $trace) {
+						if ($this->UseFireBug) {  FB::error($trace,$trace['etype']); }
+						else {
+							echo "
+								<div style='font-weight: normal; font-size: 12px; font-family: serif; padding: 2px; margin-top: 4px; background-color: {$trace['a']}; border: solid {$trace['b']} 1px; overflow: hidden;'>
+									<B>{$trace['etype']}: {$trace['msg']}</b><br />
+									<table cellpadding='2' cellspacing='0' border='1' style='width: 100%; border: solid #DFDFDF 1px; border-width: 1px; border-collapse: collapse; background-color: #FFEFEF; font-weight: normal; font-size: 12px; font-family: serif;'>".implode(" ",$trace['path'])."</table>
+							";
+							if (count($trace['stack'])>0) {
+								echo "
+										<div style='background-color: #EFEFEF;'>
+											<pre>".print_r($trace['stack'],true)."</pre>
+										</div>
+									</div>
+								";
+							}
+							echo "</div>";
+						}
+					}
+					if (!$this->UseFireBug) { echo "</div>"; }
 			}
 		}
 		public function set() {
@@ -103,19 +92,19 @@ namespace Core;
 			$args = func_get_args();
 			$arr=array();
 			while (($item=array_shift($args))!=null) {
-	// if the current item is a boolean value, apply it to whatever's in our array
-	if (gettype($item)==bool) {
-		if (count($arr)==0) { continue; }
-		// then apply our key/value pairs to the global config array
-		foreach ($arr as $var) { $this->config[$var]=$item; }
-		unset($arr); $arr = array(); // empty local array to start over
-	} else {
-		$arr[]=$item;
-	}
+				// if the current item is a boolean value, apply it to whatever's in our array
+				if (gettype($item)==bool) {
+					if (count($arr)==0) { continue; }
+					// then apply our key/value pairs to the global config array
+					foreach ($arr as $var) { $this->config[$var]=$item; }
+					unset($arr); $arr = array(); // empty local array to start over
+				} else {
+					$arr[]=$item;
+				}
 			}
 			// if anything is left in our array, we assume "false" (default).
 			if (count($arr)>0) {
-	foreach ($arr as $var) { $this->config[$var]=false; }
+				foreach ($arr as $var) { $this->config[$var]=false; }
 			}
 			$this->config[$var]=$val;
 		}
@@ -141,7 +130,7 @@ namespace Core;
 					break;
 				}
 			}
-			$this->trace[$count]['type']=(isset($this->error_codes[$errno]))?$this->error_codes[$errno]:$errno; //$this->warning_codes[$errno];
+			$this->trace[$count]['type']=(isset($this->error_codes[$errno]))?$this->error_codes[$errno]:$this->warning_codes[$errno];
 			// prevent PHP internal handler from continuing parse of error
 			return true;
 		}
@@ -151,24 +140,24 @@ namespace Core;
 			$debug = array();
 			$toprint=array();
 			foreach ($data as $item) {
-	$debug[]="
-		<tr>
-			<td>{$item['class']}{$item['type']}{$item['function']}</td>
-			<td>{$item['file']} line <b>{$item['line']}</td>
-		</tr>
-	";
-	
-	unset($item['class']); unset($item['function']); unset($item['file']); unset($item['line']); unset($item['args']); unset($item['type']);
-	foreach ($item as $type=>$var) {
-		if (
-			// we have a class object or other object.  check our objects array and make sure
-			// we have something the user wants displayed.
-			($type=="object" && @$this->exclude_objects[get_class($var)]!==true)
-			||($type!="object" && $this->config[$type]!==false)
-		) {
-			$toprint[$type]=$var;
-		}
-	}
+				$debug[]="
+					<tr>
+						<td>{$item['class']}{$item['type']}{$item['function']}</td>
+						<td>{$item['file']} line <b>{$item['line']}</td>
+					</tr>
+				";
+				
+				unset($item['class']); unset($item['function']); unset($item['file']); unset($item['line']); unset($item['args']); unset($item['type']);
+				foreach ($item as $type=>$var) {
+					if (
+						// we have a class object or other object.  check our objects array and make sure
+						// we have something the user wants displayed.
+						($type=="object" && $this->exclude_objects[get_class($var)]!==true)
+						||($type!="object" && $this->config[$type]!==false)
+					   ) {
+						$toprint[$type]=$var;
+					}
+				}
 			}
 			$debug = array_map("strip_tags", $debug);
 			return array($debug,$toprint);

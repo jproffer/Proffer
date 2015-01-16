@@ -9,8 +9,8 @@
 /**
  * Smarty noprint modifier plugin
  *
- * Type:	 modifier<br>
- * Name:	 noprint<br>
+ * Type:     modifier<br>
+ * Name:     noprint<br>
  * Purpose:  return an empty string
  *
  * @author   Uwe Tews
@@ -19,7 +19,5 @@
  */
 function smarty_modifiercompiler_noprint($params, $compiler)
 {
-	return "''";
+    return "''";
 }
-
-?>

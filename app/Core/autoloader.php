@@ -1,71 +1,45 @@
 <?php
 /**
- * Autoloader v1.1
-	* @author Johnathan Proffer
-	* @Copyright (c) Johnathan Proffer
-	* @license http://www.gnu.org/licenses/gpl-3.0.html GNU General Public Licence 
+ * Autoloader v1.2
+ * @author Johnathan Proffer
+ * @copyright (c) 2010 Johnathan Proffer
+ * @var cls Class being called
  **/
 
-namespace Core;
-/**
- * Autoload classes if possible.
- * @param class $cls 
- */
-class AutoLoader {
-	
-	private static $PathList = array();
-	
-	public function __construct() {
-		self::addPath("app");
-		$args = func_get_args();
-		foreach ($args as $arg) {
-			self::addPath($arg);
-		}
-		spl_autoload_register('Core\AutoLoader::_autoload');
-	}
-	
-	public static function addPath($path) {
-		if (is_array($path)) {
-			foreach ($path as $p) {
-				self::addPath($p);
-			}
+function __autoload($cls) {
+	$_cls=strtolower($cls);
+    static $_classes = array(
+        'smarty_config_source' => true,
+        'smarty_config_compiled' => true,
+        'smarty_security' => true,
+        'smarty_cacheresource' => true,
+        'smarty_cacheresource_custom' => true,
+        'smarty_cacheresource_keyvaluestore' => true,
+        'smarty_resource' => true,
+        'smarty_resource_custom' => true,
+        'smarty_resource_uncompiled' => true,
+        'smarty_resource_recompiled' => true,
+    );
+	if (substr($_cls,0,16) == "smarty_internal_" || isset($_classes[$_cls])) { 
+		$cls="$_cls.php";
+		if (file_exists(PATH_LIB."/smarty/sysplugins/$cls")) {
+			include(PATH_LIB."/smarty/sysplugins/$cls");
 		} else {
-			$base = realpath(dirname(__FILE__)."/../../");
-			$path = trim($path, "/");
-			if (!is_dir("$base/$path")) {
-				FB::log("error: $base/$path does not exist!");
-				exit;
-			}
-			self::$PathList[]="$base/$path";
+			include(PATH_LIB."/smarty/plugins/$cls");
 		}
+		return;
 	}
-	
-	public static function _autoload($class) {
-		if (substr($class,0,7) == 'Smarty_') { // stupid smarty CaMeLcAsE
-			$class = strtolower($class);
-		}
-		$_classFile = str_replace('\\', '/', $class);
-		$_split = explode("/", $_classFile);
-		$classFile = "$_classFile.php";
-		foreach (self::$PathList as $path) {
-			if (file_exists("$path/$classFile")) {
-				require_once("$path/$classFile");
-				return;
-			}
-		}
-		
-		// check relative path from file folder, in case it's a namespace
-		$path = PATH_APP."/".__NAMESPACE__;
-		if (file_exists("$path/$classFile")) {
-			require_once("$path/$classFile");
-			return;
-		}
-		//echo "Error: $class not found!";
-		//exit;
+
+	$path=str_replace("\\","/",$cls).".php";
+	if (file_exists(PATH_APP."/".$path)) {
+		require_once(PATH_APP."/".$path);
+	} elseif (file_exists(PATH_LIB."/".$path)) {
+		require_once(PATH_LIB."/".$path); 
+	} elseif (file_exists(PATH_APP."/Controller/$cls.php")) {
+		require_once(PATH_APP."/Controller/$cls.php");
+	} else {
+		echo "cant find $path!";exit;
 	}
-	
 }
-new AutoLoader();
-AutoLoader::addPath("app/library/smarty/sysplugins", "app/library/smarty/plugins");
 
 ?>
