@@ -1,7 +1,7 @@
 <?php
 	ob_start();
 
-	require_once("app/config/config.php");
+	require_once("app/config/bootstrap.php");
 
 	if (BENCHMARK) { \library\benchmark::start(); }
 

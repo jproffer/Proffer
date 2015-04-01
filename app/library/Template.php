@@ -1,6 +1,9 @@
 <?php
 namespace library;
 use \config\Config as Config;
+
+require_once("Twig/Autoloader.php");
+
 /**
 * @filename lib_template.php
 * @version 2.0
@@ -15,30 +18,27 @@ use \config\Config as Config;
 */
 
 final class Template {
+
+	protected $twig;
+	
+	function __construct() {
+		\Twig_Autoloader::register();
+		$loader = new \Twig_Loader_Filesystem(Config::$TPL_PATH);
+		$this->twig = new \Twig_Environment($loader, array('cache' => Config::$s_cache_path));
+	}
 	
 	public function generate($name,$params, $I_ERROR=FALSE) {
 		if (!is_object($params)&&!is_array($params)) { return; }
-		$smarty = new lSmarty();
-		$smarty->template_dir=Config::$s_template_path;
-		$smarty->compile_dir=Config::$s_compile_path;
-		$smarty->cache_dir=Config::$s_cache_path;
-//		$smarty->config_dir=Config::$s_config_path;
-		// set the default handler
-		$smarty->default_template_handler_func = '\library\Template::make_template';
 		
-		if (!empty($params)) {
-			foreach ($params as $key=>$value) {
-				$smarty->assign($key,$value);
-			}
-		}
-//		ob_start();
-		$smarty->force_compile=true; 
-		$smarty->debugging_ctrl=true;
-		$smarty->caching=1;
-		$smarty->display("$name.html");
-//		$page=ob_get_contents();
-//		ob_end_clean();
-//		return $page;
+//		if (!empty($params)) {
+//			foreach ($params as $key=>$value) {
+//				$smarty->assign($key,$value);
+//			}
+//		}
+		
+		$template = $this->twig->loadTemplate("$name.phtml");
+		
+		echo $template->render($params);
 	}
 	public static function make_template ($resource_type, $resource_name, &$template_source, &$template_timestamp, &$smarty_obj) {
 			if( $resource_type == 'file' ) {

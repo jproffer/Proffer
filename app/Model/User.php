@@ -1,5 +1,9 @@
 <?php
+/**
+ * Sample model.
+ */
 	namespace Model;
+	
 	class User extends \Model\Core\CAbstract {
 		public $type=false;
 		private $table = "users";
