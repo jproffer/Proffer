@@ -1,3 +1,0 @@
-<?php /* Smarty version 2.6.25-dev, created on 2011-07-18 15:05:31
-         compiled from Main/www.sharkspear.info.html */ ?>
-Not found: Main/www.sharkspear.info.html<hr>Theme path: /themes/default<br />Template path: /var/www/tutorary.com/app/views/Public <br />s_template_path: /var/www/tutorary.com/app/views/Public

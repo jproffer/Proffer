@@ -4,7 +4,6 @@ namespace Core;
 use \Core\Exceptions,
 	\config\Config;
 
-	static $CALLED_CONSTRUCTOR = false;
 	class CAbstract extends \Core\Dbm  {
 		private $_consolemsgs	= [],
 				$_css			= [],
@@ -40,7 +39,7 @@ use \Core\Exceptions,
 		
 		public function __destruct() {
  			global $_GlobalIncludes, $CALLED_CONSTRUCTOR ;
-			if (!$CALLED_CONSTRUCTOR ) {
+			if (!self::$_HaveCalledConstructor) {
 			    throw new \Exception("Whoops!  Seems like ".get_called_class()." doesn't call parent::__construct().", 40002);
 			}
             
@@ -83,9 +82,6 @@ use \Core\Exceptions,
 			    $this->view[$var]=$val;
 			}
 			$this->view['content'] = "{$this->uri->controller}/{$this->uri->function}.html";
-//			echo "<hr><pre>"; print_r($this->uri);exit;
-//				echo "template: {$this->uri->controller}/{$this->uri->function}",$this->view."<br />";
-//				exit;
 			    $smarty = new \library\Template();
 			    $smarty->generate("layout",$this->view);
 			}
@@ -104,8 +100,7 @@ use \Core\Exceptions,
             }
         }
 	public function __construct(\Core\Uri $uri=null) {
-        global $CALLED_CONSTRUCTOR;
-        $CALLED_CONSTRUCTOR = true;
+		self::$_HaveCalledConstructor = true;
 		self::CheckInterface(get_called_class());
         self::CheckAuth();
 
@@ -190,27 +185,6 @@ use \Core\Exceptions,
 				@$this->view['jsincludes'].="<script type='text/javascript'>console.log('CTK_JS: could not find \"$path\"');</script>\n";
 			}
 		}
-//		protected function UseMUICssComponents() {
-//			$validComponents = array(
-//				"Core",
-//				"Window",
-//				"Content",
-//				"Layout",
-//				"Dock",
-//				"Tabs"
-//			);
-//			$items = func_get_args();
-//			if (count($items)==0) { return; }
-//
-//			// add canvas for IE compatibility
-//			$this->addJS("excanvas_r43.js",false,true);
-//			foreach ($items as $item) {
-//				$item=ucwords($item);
-//				if (in_array($item, $validComponents)!==FALSE) {
-//					$this->addCSS("plugins/inc_$item.css");
-//				}
-//			}
-//		}
 		public function __get($key) {
 			return (isset(self::$_vars[$key]))?self::$_vars[$key]:false;
 		}
@@ -226,10 +200,6 @@ use \Core\Exceptions,
 			$this->config['execute']=false;
 		}
 		
-		public function __call($name, $arguments) {
-			global $TRACE;
-			$TRACE[]=__CLASS__."::$name($arguments) - ".get_called_class();
-		}
 	}
 
 ?>
