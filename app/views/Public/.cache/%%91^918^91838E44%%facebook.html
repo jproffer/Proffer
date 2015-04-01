@@ -1,0 +1,70 @@
+139
+a:4:{s:8:"template";a:1:{s:17:"App/facebook.html";b:1;}s:9:"timestamp";i:1303243220;s:7:"expires";i:1303246820;s:13:"cache_serials";a:0:{}}<!doctype html>
+<html xmlns:fb="http://www.facebook.com/2008/fbml">
+  <head>
+    <title>php-sdk</title>
+	
+    <style>
+      body {
+        font-family: 'Lucida Grande', Verdana, Arial, sans-serif;
+      }
+      h1 a {
+        text-decoration: none;
+        color: #3b5998;
+      }
+      h1 a:hover {
+        text-decoration: underline;
+      }
+    </style>
+	
+  </head>
+  <body>
+    <!--
+      We use the JS SDK to provide a richer user experience. For more info,
+      look here: http://github.com/facebook/connect-js
+    -->
+    <div id="fb-root"></div>
+	
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId   : '<?php echo $facebook->getAppId(); ?>',
+          session : <?php echo json_encode($session); ?>, // don't refetch the session when PHP already has it
+          status  : true, // check login status
+          cookie  : true, // enable cookies to allow the server to access the session
+          xfbml   : true // parse XFBML
+        });
+
+        // whenever the user logs in, we refresh the page
+        FB.Event.subscribe('auth.login', function() {
+          window.location.reload();
+        });
+      };
+
+      (function() {
+        var e = document.createElement('script');
+        e.src = document.location.protocol + '//connect.facebook.net/en_US/all.js';
+        e.async = true;
+        document.getElementById('fb-root').appendChild(e);
+      }());
+    </script>
+	
+
+    <h1><a href="example.php">php-sdk</a></h1>
+	    <div>
+      Using JavaScript &amp; XFBML: <fb:login-button></fb:login-button>
+    </div>
+    <div>
+      Without using JavaScript &amp; XFBML:
+      <a href="https://www.facebook.com/login.php?api_key=167698133283902&cancel_url=http%3A%2F%2Fwww.tutorary.com%2Fapp%2Ffacebook%2F&display=page&fbconnect=1&next=http%3A%2F%2Fwww.tutorary.com%2Fapp%2Ffacebook%2F&return_session=1&session_version=3&v=1.0">
+        <img src="http://static.ak.fbcdn.net/rsrc.php/zB6N8/hash/4li2k73z.gif">
+      </a>
+    </div>
+    
+    <h3>Session</h3>
+	
+		
+		<strong><em>You are not Connected.</em></strong>
+    
+  </body>
+</html>

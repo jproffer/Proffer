@@ -1,0 +1,23 @@
+{include file="includes/head.tpl"}
+
+<div class='container'>
+        <div class="fg-toolbar h50">
+        	<div style='float: right; padding-right: 15px;'>
+			</div>
+        </div>
+        <div class='auction'>
+        	{foreach from=$test item="product"}
+        	
+        		<div class='item'>
+        			<img src='/catalog/thumbs/{$product.image}'>
+        			{$product.title}
+        			{$product.price}
+        			{$product.description}
+        		</div>
+        	{/foreach}
+        </div>
+        <div style='clear: both; display: block; vertical-align: middle; text-align: center; padding: 10px; margin: 5px;'>
+            <span id='btn_shopnow' class=' ui-button ui-corner-all ui-state-default fg-button' style='padding: 5px;'>SHOP NOW!</span>
+        </div>
+</div>
+{include file="includes/footer.tpl"}

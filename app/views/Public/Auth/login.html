@@ -1,0 +1,38 @@
+<div class="container">
+	<section id="first" class="parallax recent-post text-center">
+		<article>
+			<div class="container">
+				<div class="row">
+					<div class="span12">
+						<form method="post" action="/auth/login">
+							{if $_error}
+								<div class="center w300px" style="color:red; padding:10px;">{$_error}</div>
+							{/if}
+							<div class="center w300px">
+								<div class="w300px">
+									<div class="w100px di label-s">Username:</div>
+									<div class="w200px di"><input type="text" name="uid" id="uid" /></div>
+								</div>
+								<div class="w300px">
+									<div class="w100px di label-s">Password:</div>
+									<div class="w200px di"><input type="password" name="pwd" id="pwd" /></div>
+								</div>
+								<input type="submit" value="Login" />
+
+								<div class="label-s center">
+									<div class="w300px di center"><a href="/accounts/recover/">Forgot Password?</a>&nbsp;&nbsp;<a href="/accounts/register/">Register</a></div>
+								</div>
+							</div>
+						<div style='position: relative; margin-top: 0px; height: 50px;'>
+							<a class='next right button'>Next &raquo;</a>
+						</div>
+							 <div class="center w300px">
+								<a class='button'>test</a>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</article>
+	</section>
+</div>

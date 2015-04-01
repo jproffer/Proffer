@@ -1,0 +1,30 @@
+{include file="includes/head.tpl"}
+
+<div class='container'>
+        <div class="fg-toolbar h50">
+        </div>
+        <div class='auction'>
+<form method='post' action='/auth/login/'>
+	<div id="login">
+<h2>Log in</h2>
+				<div class='error' style='text-align: center; vertical-align: middle;'>{$err}</div>
+				<table align='center' border='1'>
+					<tr>
+						<td >Username:</td>
+						<td><input type='text' name='uid' id='uid'></td>
+					</tr>
+					<tr>
+						<td >Password:</td>
+						<td><input type='password' name='pwd' id='pwd'></td>
+					</tr>
+					<TR>
+						<td>&nbsp;</td>
+						<td>
+							 <a id='btnLogin' class='ui-button ui-corner-all ui-state-default fg-button' style='color: black; padding: 2px;' onclick="$('frmLogin').submit();">Login</a>
+						</td>
+					</TR>
+				</table>
+	</div>
+</form>
+</div>
+{include file="includes/footer.tpl"}

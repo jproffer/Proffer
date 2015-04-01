@@ -1,0 +1,39 @@
+{include file="includes/head.tpl"}
+
+<div class='container'>
+        <div class="fg-toolbar h50">
+        	<div style='float: right; padding-right: 15px;'>
+				<form method='post' action='/auth/login' id='frmLogin'>
+	                <div style='float: right; margin-top: 20px;'>
+	                    <a id='btnLogin' class='ui-button ui-corner-all ui-state-default fg-button' style='color: black; padding: 2px;' onclick="$('frmLogin').submit();">Login</a>
+	                </div>
+	                <div style='float: right; padding-right: 4px; padding-top: 4px;'>
+	                    <table cellpadding='1' border='0' cellspacing='1'>
+	                        <tr>
+	                            <td style='padding-right: 3px;'>Username</td>
+	                            <td><input type='text' class='text  ui-corner-all w50' name='uid' id='uid'></td>
+	                        </tr>
+	                        <tr>
+	                            <td style='padding-right: 3px;'>Password</td>
+	                            <td><input type='password' class='text ui-corner-all w50' name='pwd' id='pwd'</td>
+	                        </tr>
+	                    </table>
+	                </div>
+				</form>
+			</div>
+        </div>
+        <div class='auction'>
+<ul id='simple-tabs'>
+    <ul>
+<li><a href="#tab-1">Tab 1</a></li>
+<li><a href="#tab-2">Tab 2</a></li>
+    </ul>
+<div id="tab-1">Tab 1 Content</div>
+<div id="tab-2">Tab 2 Content</div>
+</ul>
+        </div>
+        <div style='clear: both; display: block; vertical-align: middle; text-align: center; padding: 10px; margin: 5px;'>
+            <span id='btn_shopnow' class=' ui-button ui-corner-all ui-state-default fg-button' style='padding: 5px;'>SHOP NOW!</span>
+        </div>
+</div>
+{include file="includes/footer.tpl"}
