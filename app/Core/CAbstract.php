@@ -38,7 +38,7 @@ use \Core\Exceptions,
 		}
 		
 		public function __destruct() {
- 			global $_GlobalIncludes, $CALLED_CONSTRUCTOR ;
+ 			global $_GlobalIncludes;
 			if (!self::$_HaveCalledConstructor) {
 			    throw new \Exception("Whoops!  Seems like ".get_called_class()." doesn't call parent::__construct().", 40002);
 			}
@@ -54,20 +54,23 @@ use \Core\Exceptions,
 //			$this->view['BASE']=BASEPATH;
 			$this->view['themepath']=Config::$themepath;
 			if ($this->config['include_js']) {
-			    // check if we have any error messages for console.log
-			    if (count($this->_consolemsgs)>0) {
-				$js="<script type='text/javascript'>";
-				foreach ($this->_consolemsgs as $msg) {
-				    $js.="console.log('$msg');\n";
-				}
-				$js.="</script>";
-				$this->view['jsincludes'].=$js;
-			    }
 			    if (!empty(self::$jsLibraries)) {
 					$path=PATH_ROOT."/js/plugins/";
 					foreach (self::$jsLibraries as $lib) {
 						$this->recursiveinclude($path.$lib);
 					}
+			    }
+				if (!empty($this->_js)) {
+					$this->view['jsincludes'] = implode("\n", $this->_js);
+				}
+			    // check if we have any error messages for console.log
+			    if (count($this->_consolemsgs)>0) {
+					$js="<script type='text/javascript'>";
+					foreach ($this->_consolemsgs as $msg) {
+						$js.="console.log('$msg');\n";
+					}
+					$js.="</script>";
+					$this->view['jsincludes'].=$js;
 			    }
 			}
 			if ($this->config['include_css']) {
@@ -81,11 +84,11 @@ use \Core\Exceptions,
 			foreach (self::$_vars as $var=>$val) {
 			    $this->view[$var]=$val;
 			}
-			$this->view['content'] = "{$this->uri->controller}/{$this->uri->function}.html";
-			    $smarty = new \library\Template();
-			    $smarty->generate("layout",$this->view);
+//			$this->view['content'] = "{$this->uri->controller}/{$this->uri->function}.html";
+			    $twig = new \library\Template();
+			    $twig->generate("{$this->uri->controller}/{$this->uri->function}", $this->view);
 			}
-					parent::__destruct();
+			parent::__destruct();
 		}
 		
 		protected function _setCSSStyle($type="screen") {
@@ -176,13 +179,13 @@ use \Core\Exceptions,
 				$iee="<![endif]-->";
 			}
 			if ($external) {
-				@$this->view['jsincludes'].="{$ies}<script type='text/javascript' src='$path'></script>{$iee}\n"; return;
+				@$this->_js[] = "{$ies}<script type='text/javascript' src='$path'></script>{$iee}\n"; return;
 			}
 			if (file_exists(PATH_ROOT."/js/".$path)) {
                 $crc32=crc32(file_get_contents(PATH_ROOT."/js/".$path));
-				@$this->view['jsincludes'].="{$ies}<script type='text/javascript' src='".PATH_WWW."/js/$path?$crc32'></script>{$iee}\n";
+				@$this->_js[] = "{$ies}<script type='text/javascript' src='".PATH_WWW."/js/$path?$crc32'></script>{$iee}\n";
 			} else {
-				@$this->view['jsincludes'].="<script type='text/javascript'>console.log('CTK_JS: could not find \"$path\"');</script>\n";
+				@$this->_js[] = "<script type='text/javascript'>console.log('CTK_JS: could not find \"$path\"');</script>\n";
 			}
 		}
 		public function __get($key) {
