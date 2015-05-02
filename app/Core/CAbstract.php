@@ -84,9 +84,10 @@ use \Core\Exceptions,
 			foreach (self::$_vars as $var=>$val) {
 			    $this->view[$var]=$val;
 			}
-//			$this->view['content'] = "{$this->uri->controller}/{$this->uri->function}.html";
+			$this->view['content'] = "{$this->uri->controller}/{$this->uri->function}.phtml";
 			    $twig = new \library\Template();
-			    $twig->generate("{$this->uri->controller}/{$this->uri->function}", $this->view);
+				$twig->generate("layout", $this->view);
+//			    $twig->generate("{$this->uri->controller}/{$this->uri->function}", $this->view);
 			}
 			parent::__destruct();
 		}
@@ -130,7 +131,7 @@ use \Core\Exceptions,
 					}
 				}
 				if (file_exists(PATH_ROOT.Config::$themepath."/".Config::$userpath."/{$uri->controller}/{$uri->function}.css")) {
-					 $crc32=crc32(file_get_contents(PATH_ROOT.Config::$themepath."/{$uri->controller}/{$uri->function}.css"));
+					 $crc32=filemtime(PATH_ROOT.Config::$themepath."/{$uri->controller}/{$uri->function}.css");
 					$this->addCSS(PATH_WWW."/get/css/name/".Config::$userpath."_{$uri->controller}_{$uri->function}/hash/$crc32",true);
 				}
 			}
@@ -145,31 +146,69 @@ use \Core\Exceptions,
 		
 		protected function addLESS($path) {
 			if (file_exists(PATH_ROOT.Config::$themepath."/".$path)) {
-                $crc32=crc32(file_get_contents(PATH_ROOT.Config::$themepath."/".$path));
+                $crc32=filemtime(PATH_ROOT.Config::$themepath."/".$path);
 				$this->_less[]=PATH_WWW.Config::$themepath."/$path?$crc32";
 			} else {
-				$this->_consolemsgs[]="CTK_CSS: could not find ".PATH_WWW.Config::$themepath."/".$path;
+				$this->_consolemsgs[]="CSS: could not find ".PATH_WWW.Config::$themepath."/".$path;
 			}
+		}
+		protected function addCustomCSSPath($path) {
+			if (file_exists(PATH_ROOT.$path)) {
+                $crc32=filemtime(PATH_ROOT.$path);
+				$this->_css[]="$path?$crc32";
+			} else {
+				$this->_consolemsgs[]="CSS: could not find ".PATH_WWW.Config::$themepath."/".$path;
+			}
+			
 		}
 		protected function addCSS($path,$external=false) {
 			if ($external) { $this->_css[]=$path; return; }
 			if (file_exists(PATH_ROOT.Config::$themepath."/".$path)) {
-                $crc32=crc32(file_get_contents(PATH_ROOT.Config::$themepath."/".$path));
+                $crc32=filemtime(PATH_ROOT.Config::$themepath."/".$path);
 				$this->_css[]=PATH_WWW.Config::$themepath."/$path?$crc32";
 			} else {
-				$this->_consolemsgs[]="CTK_CSS: could not find ".PATH_WWW.Config::$themepath."/".$path;
+				$this->_consolemsgs[]="CSS: could not find ".PATH_WWW.Config::$themepath."/".$path;
 			}
 		}
 		protected function addLibrary($elements,$IEOnly=false) {
 			$elements=preg_split("/[\,\;\s]/",$elements,-1,PREG_SPLIT_NO_EMPTY);
 			if (count($elements)>0) {
 				foreach ($elements as $element) {
-					if (file_exists(PATH_ROOT."/js/plugins/jquery-$element.js")) {
-						$this->addJS("plugins/jquery-$element.js",$IEOnly);
+					if (file_exists(PATH_ROOT."/js/plugins/jquery/$element.js")) {
+						$this->addJS("plugins/jquery/$element.js",$IEOnly);
+					} elseif (is_dir(PATH_ROOT."/js/plugins/$element")) {
+						$list=glob(PATH_ROOT."/js/plugins/$element/*");
+						foreach ($list as $what) {
+							if (is_dir($what)) { continue; }
+							if (preg_match("/\.js$/",$what)) {
+								$file=str_replace(PATH_ROOT,"",$what);
+								$this->addCustomJSPath($file);
+							}
+							elseif (preg_match("/\.css$/",$what)) {
+								$file=str_replace(PATH_ROOT,"",$what);
+								$this->addCustomCSSPath($file);
+							}
+						}
 					} else {
 						$this->addJS("plugins/$element.js",$IEOnly);
 					}
 				}
+			}
+		}
+		protected function addCustomJSPath($path, $external=false, $IEOnly=false) {
+			$ies=$iee="";
+			if ($IEOnly) {
+				$ies="<!--[if IE]>";
+				$iee="<![endif]-->";
+			}
+			if ($external) {
+				@$this->_js[] = "{$ies}<script type='text/javascript' src='$path'></script>{$iee}\n"; return;
+			}
+			if (file_exists(PATH_ROOT.$path)) {
+                $crc32=filemtime(PATH_ROOT.$path);
+				@$this->_js[] = "{$ies}<script type='text/javascript' src='".PATH_WWW."/$path?$crc32'></script>{$iee}\n";
+			} else {
+				@$this->_js[] = "<script type='text/javascript'>console.log('CTK_JS: could not find \"$path\"');</script>\n";
 			}
 		}
 		protected function addJS($path, $external=false, $IEOnly=false) {
@@ -182,7 +221,7 @@ use \Core\Exceptions,
 				@$this->_js[] = "{$ies}<script type='text/javascript' src='$path'></script>{$iee}\n"; return;
 			}
 			if (file_exists(PATH_ROOT."/js/".$path)) {
-                $crc32=crc32(file_get_contents(PATH_ROOT."/js/".$path));
+                $crc32=filemtime(PATH_ROOT."/js/".$path);
 				@$this->_js[] = "{$ies}<script type='text/javascript' src='".PATH_WWW."/js/$path?$crc32'></script>{$iee}\n";
 			} else {
 				@$this->_js[] = "<script type='text/javascript'>console.log('CTK_JS: could not find \"$path\"');</script>\n";
