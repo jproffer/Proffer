@@ -9,7 +9,9 @@
 	*/
 
 	namespace Core;
-	use		Core\Exceptions\DatabaseException as DE;
+	use	
+		\Core\Exceptions\DatabaseException as DE,
+		\config\Config;
 	
 	class MDbm extends \mysqli {
 
@@ -27,10 +29,9 @@
 		}
 
 		public function __construct() {
-			global $DB_CONNECTOR;
 			$this->_mysql_errmsg='';
 			$this->_mysql_errcode=0;
-			$this->conn = parent::__construct($DB_CONNECTOR['host'],$DB_CONNECTOR['uid'],$DB_CONNECTOR['pwd'],$DB_CONNECTOR['db'],$DB_CONNECTOR['port']);
+			$this->conn = parent::__construct(Config::$DB_CONNECTOR['host'],Config::$DB_CONNECTOR['uid'],Config::$DB_CONNECTOR['pwd'],Config::$DB_CONNECTOR['db'],Config::$DB_CONNECTOR['port']);
 			if($this->connect_error) {
 				$this->_mysql_errcode = mysqli_connect_errno();
 				$this->_mysql_errmsg = mysqli_connect_error();

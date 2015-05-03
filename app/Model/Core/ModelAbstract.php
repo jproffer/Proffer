@@ -6,20 +6,24 @@
 	* @license http://www.gnu.org/licenses/gpl-3.0.html GNU General Public Licence 
  */
 
-namespace Model;
+namespace Model\Core;
 
 use \Core\MDbm;
 
 abstract class ModelAbstract {
-	protected	$table,
-				$profile = array(),
-				$id;
 	
+	protected	$table,
+				$id,
+				$key="id";
+	
+	protected	$data = [];
+	
+	protected	$orm = [];
 	
 	protected function fetch($id) {
-		$dbm = new \Core\MDBM();
+		$dbm = new \Core\MDbm();
 		$sql = "
-			select * from {$this->table} where id = ?
+			select * from {$this->table} where {$this->key} = ?
 		";
 		$stmt = $dbm->prepare($sql);
 		if (!$stmt) { echo "error with $sql: <pre>"; print_r($stmt); exit; }
@@ -35,7 +39,7 @@ abstract class ModelAbstract {
 	 * Save or update record
 	 */
 	public function save() {
-		$dbm = new \Core\MDbm();
+		$dbm = \Core\MDbm::getInstance();
 		if (!empty($this->id)) {
 			// this is not a new record.  Update values
 			$sql = "update {$this->table} set ";
@@ -45,13 +49,13 @@ abstract class ModelAbstract {
 			foreach ($this->orm as $map=>$type) {
 				$mapItems[]="`$map`=?";
 				$bindvarTypes .= $type;
-				$bindvalues[] = $this->profile[$map];
+				$bindvalues[] = $this->data[$map];
 			}
 			$bindvalues[]=$this->id;
 			$bindvarTypes .= "d";
 			$params = array_merge(array($bindvarTypes), $bindvalues);
 			$sql .= implode(",",$mapItems);
-			$sql .= " where id = ?";
+			$sql .= " where {$this->key} = ?";
 			$stmt = $dbm->prepare($sql);
 			if (!$stmt) { echo "error with $sql"; exit; }
 			
@@ -70,7 +74,7 @@ abstract class ModelAbstract {
 			foreach ($this->orm as $gmap=>$type) {
 				$bindfields[] = $gmap;
 				$bindvarTypes .= $type;
-				$bindvalues[] = $this->profile[$gmap];
+				$bindvalues[] = $this->data[$gmap];
 			}
 			$sql = "insert into {$this->table} (`".implode("`,`", $bindfields)."`) values ($map)";
 			$params = array_merge(array($bindvarTypes), $bindvalues);
@@ -92,8 +96,8 @@ abstract class ModelAbstract {
 			$refs[$key] = &$arr[$key];
 		return $refs;
 	}
-	public function __get($key) { return $this->profile[$key]; }
-	public function __set($key,$value) { $this->profile[$key]=$value; }
+	public function __get($key) { return $this->data[$key]; }
+	public function __set($key,$value) { $this->data[$key]=$value; }
 		
 	public function toArray() {
 		$arr= array();
