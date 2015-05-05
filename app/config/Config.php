@@ -21,6 +21,11 @@ class Config {
 				"db"	=> "mydb",
 				"port"	=> 3306
 			];
+	public static $PUBLIC_CONTROLLERS = [
+			"Controller\Main", 
+			"Controller\Get", 
+			"Controller\Error"
+	];
 	public static $Twitter = [
 			'oauth_access_token' => '',
 			'oauth_access_token_secret' => '',

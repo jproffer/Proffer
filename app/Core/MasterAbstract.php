@@ -137,11 +137,10 @@
 		 */
 		protected function CheckAuth() {
 			// a list of "public" classes that can be accessed without being logged in.
-			global $PUBLIC_CONTROLLERS;
 			if (get_called_class() == 'Controller\Api') { return; }
 			$user = $_SESSION['user'];
 			if (!isset($user)) {
-				if (in_array(get_called_class(),$PUBLIC_CONTROLLERS) === false) {
+				if (in_array(get_called_class(),Config::$PUBLIC_CONTROLLERS) === false) {
 					header("Location:/auth/login/",true,301);
 					exit;
 				}
