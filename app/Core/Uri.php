@@ -21,7 +21,6 @@ class Uri {
 	public function __construct() {
 		$this->params = [];
 		$path = trim(parse_url($_SERVER["REQUEST_URI"], PHP_URL_PATH), "/");
-		
 		@list($controller, $action, $params) = explode("/", $path, 3);
 //		$path = preg_replace('/[^a-zA-Z0-9]/', "", $path);
 
@@ -31,8 +30,13 @@ class Uri {
 		if (empty($this->controller)) { $this->controller = self::DEFAULT_CONTROLLER; }
 		if (empty($this->function)) { $this->function = self::DEFAULT_FUNCTION; }
 		
-		while (count($params)>0) {
-			$this->params[array_shift($params)]=array_shift($params);
+
+		if (is_array($params) && count($params) > 0) {
+			while (count($params) > 0) {
+				$key = array_shift($params);
+				$val = @array_shift($params);	// last value might be missing or intentionally empty
+				$this->params[$key]=array_shift($val);
+			}
 		}
 		if (count($_REQUEST)>0) {
 			foreach ($_REQUEST as $var=>$val) {
