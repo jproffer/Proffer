@@ -43,10 +43,6 @@
 
 		public function __destruct() {
 		}
-		public function __call($name, $arguments) {
-			global $TRACE;
-			$TRACE[]=__CLASS__."::$name($arguments) - ".get_called_class();
-		}
 
 		public function query($sql) {
 			

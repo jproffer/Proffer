@@ -4,7 +4,7 @@ namespace Core;
 use \Core\Exceptions,
 	\config\Config;
 
-	class CAbstract extends \Core\Dbm  {
+	class CAbstract extends \Core\MDbm  {
 		private $_consolemsgs	= [],
 				$_css			= [],
 				$_js			= [],
