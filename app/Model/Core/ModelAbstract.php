@@ -20,6 +20,30 @@ abstract class ModelAbstract {
 	
 	protected	$orm = [];
 	
+	/**
+	 * If an array of data is provided, iterate it and add valid columns to our
+	 * data array.
+	 * 
+	 * @param array $row
+	 */
+	public function __construct($row=false) {
+		if (!empty($row)) {
+			$_keys = array_keys($this->orm);
+			foreach ($row as $key=>$val) {
+				if (in_array($key, $_keys)) {
+					$this->data[$key]=$val;
+				}
+			}
+		}
+	}
+	
+	
+	/**
+	 * Fetch a single record based on key.
+	 * 
+	 * @param int $id
+	 * @return array
+	 */
 	protected function fetch($id) {
 		$dbm = new \Core\MDbm();
 		$sql = "
@@ -90,15 +114,25 @@ abstract class ModelAbstract {
 			return $stmt->insert_id;
 		}
 	}
+	
+	
+	
 	function makeValuesReferenced($arr){
 		$refs = array();
 		foreach($arr as $key => $value)
 			$refs[$key] = &$arr[$key];
 		return $refs;
 	}
+	
+	
 	public function __get($key) { return $this->data[$key]; }
 	public function __set($key,$value) { $this->data[$key]=$value; }
-		
+	
+	/**
+	 * Convert our object to an array of key/value pairs.
+	 * 
+	 * @return array
+	 */
 	public function toArray() {
 		$arr= array();
 		foreach ($this as $obj=>$val) {
