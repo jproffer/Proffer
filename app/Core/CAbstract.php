@@ -4,7 +4,7 @@ namespace Core;
 use \Core\Exceptions,
 	\config\Config;
 
-	class CAbstract extends \Core\MDbm  {
+	abstract class CAbstract {
 		private $_consolemsgs	= [],
 				$_css			= [],
 				$_js			= [],
@@ -108,7 +108,6 @@ use \Core\Exceptions,
 		self::CheckInterface(get_called_class());
         self::CheckAuth();
 
-			parent::__construct();
 			$this->uri=$uri;
 			if ($this->config['include_js']) {
 				$this->addJS("jquery.js");
@@ -240,6 +239,13 @@ use \Core\Exceptions,
 		
 		public function noexec() {
 			$this->config['execute']=false;
+		}
+		
+		protected function DeleteSession() {
+			if (session_status() == PHP_SESSION_NONE) {
+				session_start();
+			}
+			session_destroy();
 		}
 		
 	}

@@ -8,48 +8,43 @@
 
 namespace Model\Core;
 
-use \Core\MDbm;
-
 abstract class ModelAbstract {
 	
-	protected	$table,
-				$id,
+	protected	$table = null,
+				$id = null,
 				$key="id";
 	
 	protected	$data = [];
 	
 	protected	$orm = [];
 	
-	/**
-	 * If an array of data is provided, iterate it and add valid columns to our
-	 * data array.
-	 * 
-	 * @param array $row
-	 */
+	protected static $dbm;
+	
+	
 	public function __construct($row=false) {
+		self::$dbm = \Core\MDbm::getInstance();
+		if ($this->table == null) {
+			throw new Exception("Must define table name in model instance.");
+		}
 		if (!empty($row)) {
 			$_keys = array_keys($this->orm);
 			foreach ($row as $key=>$val) {
 				if (in_array($key, $_keys)) {
 					$this->data[$key]=$val;
+				} elseif ($key == $this->key) {
+					// assign id value
+					$this->id = $val;
 				}
 			}
 		}
 	}
 	
 	
-	/**
-	 * Fetch a single record based on key.
-	 * 
-	 * @param int $id
-	 * @return array
-	 */
 	protected function fetch($id) {
-		$dbm = new \Core\MDbm();
 		$sql = "
 			select * from {$this->table} where {$this->key} = ?
 		";
-		$stmt = $dbm->prepare($sql);
+		$stmt = self::$dbm->prepare($sql);
 		if (!$stmt) { echo "error with $sql: <pre>"; print_r($stmt); exit; }
 		$stmt->bind_param("i", $id);
 		$stmt->execute();
@@ -63,7 +58,6 @@ abstract class ModelAbstract {
 	 * Save or update record
 	 */
 	public function save() {
-		$dbm = \Core\MDbm::getInstance();
 		if (!empty($this->id)) {
 			// this is not a new record.  Update values
 			$sql = "update {$this->table} set ";
@@ -80,7 +74,7 @@ abstract class ModelAbstract {
 			$params = array_merge(array($bindvarTypes), $bindvalues);
 			$sql .= implode(",",$mapItems);
 			$sql .= " where {$this->key} = ?";
-			$stmt = $dbm->prepare($sql);
+			$stmt = self::$dbm->prepare($sql);
 			if (!$stmt) { echo "error with $sql"; exit; }
 			
 			call_user_func_array(array(&$stmt, 'bind_param'), $this->makeValuesReferenced($params));
@@ -102,8 +96,8 @@ abstract class ModelAbstract {
 			}
 			$sql = "insert into {$this->table} (`".implode("`,`", $bindfields)."`) values ($map)";
 			$params = array_merge(array($bindvarTypes), $bindvalues);
-			$stmt = $dbm->prepare($sql);
-			if (!$stmt) { echo "error with $sql: {$dbm->error}"; exit; }
+			$stmt = self::$dbm->prepare($sql);
+			if (!$stmt) { echo "error with $sql: {self::$dbm->error}"; exit; }
 			
 			call_user_func_array(array(&$stmt, 'bind_param'), $this->makeValuesReferenced($params));
 			$stmt->execute();
@@ -114,25 +108,15 @@ abstract class ModelAbstract {
 			return $stmt->insert_id;
 		}
 	}
-	
-	
-	
 	function makeValuesReferenced($arr){
 		$refs = array();
 		foreach($arr as $key => $value)
 			$refs[$key] = &$arr[$key];
 		return $refs;
 	}
-	
-	
 	public function __get($key) { return $this->data[$key]; }
 	public function __set($key,$value) { $this->data[$key]=$value; }
-	
-	/**
-	 * Convert our object to an array of key/value pairs.
-	 * 
-	 * @return array
-	 */
+		
 	public function toArray() {
 		$arr= array();
 		foreach ($this as $obj=>$val) {
