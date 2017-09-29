@@ -2,8 +2,6 @@
 namespace library;
 use \config\Config as Config;
 
-require_once("Twig/Autoloader.php");
-
 /**
 * @filename Template.php
 * @version 2.1
@@ -22,7 +20,6 @@ final class Template {
 	protected $twig;
 	
 	function __construct() {
-		\Twig_Autoloader::register();
 		$loader = new \Twig_Loader_Filesystem(Config::$TPL_PATH);
 		$params = [
 			"strict_variables" => true,

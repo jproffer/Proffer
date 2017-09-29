@@ -13,7 +13,7 @@
 			"include_js"	=>false,
 			"execute"		=>false
 		);
-		
+
 		public static function CheckLogin($uid,$pwd) {
 			$dbm = new \Core\Dbm();
 			$pwd=sha1($pwd);

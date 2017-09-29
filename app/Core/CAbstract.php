@@ -86,10 +86,11 @@ use \Core\Exceptions,
 			}
 			$this->view['content'] = "{$this->uri->controller}/{$this->uri->function}.phtml";
 			    $twig = new \library\Template();
+// layout-based view
 				$twig->generate("layout", $this->view);
+// per-page view
 //			    $twig->generate("{$this->uri->controller}/{$this->uri->function}", $this->view);
 			}
-			parent::__destruct();
 		}
 		
 		protected function _setCSSStyle($type="screen") {
