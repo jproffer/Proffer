@@ -1,4 +1,4 @@
-#MODELS
+# MODELS
 Proffer currently offers two different model systems - built-in and third-party.  They can run side-by-side, but typically you want to choose one modeling method.
 
 ## Using built-in modeling 
