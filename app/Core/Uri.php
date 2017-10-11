@@ -29,13 +29,12 @@ class Uri {
 		
 		if (empty($this->controller)) { $this->controller = self::DEFAULT_CONTROLLER; }
 		if (empty($this->function)) { $this->function = self::DEFAULT_FUNCTION; }
-		
-
+		$params = explode("/", $params);
 		if (is_array($params) && count($params) > 0) {
 			while (count($params) > 0) {
 				$key = array_shift($params);
 				$val = @array_shift($params);	// last value might be missing or intentionally empty
-				$this->params[$key]=array_shift($val);
+				$this->params[$key]=$val;
 			}
 		}
 		if (count($_REQUEST)>0) {
